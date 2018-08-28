@@ -4,7 +4,7 @@ import java.util.Scanner;
  * Class for solution.
  */
 public class Solution {
-	/**
+	/**.
 	 * solution class to find the solution
 	 *
 	 * @param      args  These are arguments
@@ -26,7 +26,7 @@ public class Solution {
 	public static void rootsOfQuadraticEquation(final int a, final int b, final int c){
 		double x;
 		double y;
-		int z = 4;
+		final int z = 4;
 		x = (-b + Math.sqrt((b * b) - z * a * c)) / (2 * a);
 		y = (-b - Math.sqrt((b * b) - z * a * c)) / (2  * a);
 		System.out.println(x + " " + y);
