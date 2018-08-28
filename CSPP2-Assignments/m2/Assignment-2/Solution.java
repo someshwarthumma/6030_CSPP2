@@ -4,7 +4,10 @@ import java.util.Scanner;
  * Class for solution.
  */
 public class Solution {
-    public Solution(){
+    /**
+     * THis is cont
+     */
+    private Solution() {
         //This is solution
     }
     /**.
