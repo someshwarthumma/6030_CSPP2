@@ -14,7 +14,7 @@ public class Solution {
         int a = scan.nextInt();
         int b = scan.nextInt();
         int c = scan.nextInt();
-        Equation(a, b, c);
+        equation(a, b, c);
     }
     /**
      * It gives
@@ -23,7 +23,7 @@ public class Solution {
      * @param      b     integer
      * @param      c     integer
      */
-    public static void Equation(final int a, final int b, final int c) {
+    public static void equation(final int a, final int b, final int c) {
         double x;
         double y;
         final int z = 4;
