@@ -4,6 +4,9 @@ import java.util.Scanner;
  * Class for solution.
  */
 public class Solution {
+    public Solution(){
+        //This is solution
+    }
     /**.
      * solution class to find the solution
      *
