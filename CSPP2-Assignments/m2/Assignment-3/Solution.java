@@ -14,7 +14,7 @@ public final class Solution {
      *
      * @param      args  this is argument
      */
-    public static final void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         long base = s.nextInt();
         long exponent = s.nextInt();
