@@ -5,7 +5,7 @@ import java.util.Scanner;
  */
 public final class Solution {
     /**.
-     * THis is cont
+     * THis is contstructor.
      */
     private Solution() {
         //This is solution
