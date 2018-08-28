@@ -16,7 +16,7 @@ public class Solution {
         int c = scan.nextInt();
         equation(a, b, c);
     }
-    /**
+    /**.
      * It gives
      *
      * @param      a     integer
