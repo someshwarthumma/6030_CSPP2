@@ -9,7 +9,7 @@ public class Solution {
 	 *
 	 * @param      args  These are arguments
 	 */
-	public static void main(String[] args) {
+	public static final void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int a = scan.nextInt();
 		int b = scan.nextInt();
@@ -23,7 +23,7 @@ public class Solution {
 	 * @param      b     integer
 	 * @param      c     integer
 	 */
-	public static void rootsOfQuadraticEquation(final int a, final int b, final int c){
+	public static void rootsOfQuadraticEquation(final int a, final int b, final int c) {
 		double x;
 		double y;
 		final int z = 4;
