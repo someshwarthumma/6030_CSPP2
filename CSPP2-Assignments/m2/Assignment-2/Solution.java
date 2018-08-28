@@ -9,7 +9,7 @@ public class Solution {
      *
      * @param      args  These are arguments
      */
-    public static final void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         int a = scan.nextInt();
         int b = scan.nextInt();
