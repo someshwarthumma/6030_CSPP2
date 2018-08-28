@@ -5,13 +5,13 @@ import java.util.Scanner;
  */
 public final class Solution {
     /**.
-     * THis is contstructor.
+     * This is contstructor.
      */
     private Solution() {
         //This is solution
     }
     /**.
-     * solution class to find the solution
+     * class to find the solution
      *
      * @param      args  These are arguments
      */
@@ -23,7 +23,7 @@ public final class Solution {
         equation(a, b, c);
     }
     /**.
-     * It gives
+     *It evaluate the quardatic equation.
      *
      * @param      a     integer
      * @param      b     integer
