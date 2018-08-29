@@ -18,18 +18,18 @@ public final class Solution {
      */
     public static void main(final String[] args) {
 
-        Scanner s = new Scanner(System.in);
-        int n = s.nextInt();
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
         int count = 0;
         for (int i = 1; i <= n; i++) {
-            int j = i;
-            final int t = 10;
-            final int se = 7;
-            while (j != 0) {
-                if ((j % t) == se) {
+            int temp = i;
+            final int ten = 10;
+            final int seven = 7;
+            while (temp != 0) {
+                if ((temp % ten) == seven) {
                     count = count + 1;
                 }
-                j = j / t;
+                temp = temp / ten;
             }
 
 
