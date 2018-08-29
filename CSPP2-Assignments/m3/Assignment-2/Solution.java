@@ -8,13 +8,14 @@ public class Solution {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         int count = 0;
-        for (int i = 1; i <= n; i ++) {
+        for (int i = 1; i <= n; i++) {
             int j = i;
+            final int t = 10 , seven = 7;
             while (j != 0) {
-                if ((j % 10) == 7) {
+                if ((j % t) == 7) {
                     count = count + 1;
                 }
-                j = j / 10;
+                j = j / t;
             }
 
 
