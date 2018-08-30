@@ -4,6 +4,9 @@ import java.util.Scanner;
  */
 public final class Solution {
     /* Fill the main function to print resultant of addition of matrices*/
+    /**.
+     * This is a scanner object
+     */
     private static Scanner scan = new Scanner(System.in);
     
     /**.
