@@ -2,9 +2,9 @@ import java.util.Scanner;
 /**.
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /* Fill the main function to print resultant of addition of matrices*/
-    static Scanner scan = new Scanner(System.in);
+    private static Scanner scan = new Scanner(System.in);
     
     /**.
      * Constructs the object.
