@@ -8,11 +8,10 @@ public final class Solution {
      * This is a scanner object
      */
     private static Scanner scan = new Scanner(System.in);
-    
     /**.
      * Constructs the object.
      */
-    private Solution(){
+    private Solution() {
         //This is constructor
     }
     /**.
