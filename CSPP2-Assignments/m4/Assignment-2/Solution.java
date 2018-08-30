@@ -28,7 +28,9 @@ public class Solution {
 
 
     }
-    public static int[][] readMatrix(final int row,final int column,final int[][] matrix) {
+    public static int[][] readMatrix(final int row,
+                                     final int column,
+                                     final int[][] matrix) {
         // Scanner sc = new Scanner(System.in);
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < column; j++) {
