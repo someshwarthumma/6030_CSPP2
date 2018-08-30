@@ -23,6 +23,9 @@ public class Solution {
 				System.out.println(matrix1[i][columnM1-1]);
 			}
 		}
+		else{
+			System.out.println("not possible");
+		}
 
 
 	}
