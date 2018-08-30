@@ -26,10 +26,10 @@ public class Solution {
 
 	}
 	public static int[][] readMatrix(int row, int column, int[][] matrix){
-		Scanner scan = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		for(int i=0;i<row; i++){
 			for(int j=0; j<column; j++){
-				matrix[i][j] = scan.nextInt();
+				matrix[i][j] = sc.nextInt();
 			}
 		}
 		return matrix;
