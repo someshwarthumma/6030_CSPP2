@@ -1,5 +1,6 @@
 import java.util.Scanner;
-public class Solution {
+//This is solution class
+public final class Solution {
     /**.
      * Private constructor
      */
