@@ -1,8 +1,9 @@
 import java.util.*;
 public class Solution {
 	/* Fill the main function to print resultant of addition of matrices*/
+	static Scanner scan = new Scanner(System.in);
 	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+		
 		int rowM1 = scan.nextInt();
 		int columnM1 = scan.nextInt();
 		int[][] matrix1 = new int[rowM1][columnM1];
@@ -26,10 +27,10 @@ public class Solution {
 
 	}
 	public static int[][] readMatrix(int row, int column, int[][] matrix){
-		Scanner sc = new Scanner(System.in);
+		// Scanner sc = new Scanner(System.in);
 		for(int i=0;i<row; i++){
 			for(int j=0; j<column; j++){
-				matrix[i][j] = sc.nextInt();
+				matrix[i][j] = scan.nextInt();
 			}
 		}
 		return matrix;
