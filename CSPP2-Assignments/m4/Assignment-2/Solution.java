@@ -1,7 +1,22 @@
 import java.util.*;
+/**.
+ * Class for solution.
+ */
 public class Solution {
     /* Fill the main function to print resultant of addition of matrices*/
     static Scanner scan = new Scanner(System.in);
+    
+    /**.
+     * Constructs the object.
+     */
+    private Solution(){
+        //This is constructor
+    }
+    /**.
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
     public static void main(String[] args) {
 
         int rowM1 = scan.nextInt();
@@ -28,6 +43,15 @@ public class Solution {
 
 
     }
+    /**.
+     * Reads a matrix.
+     *
+     * @param      row     The row
+     * @param      column  The column
+     * @param      matrix  The matrix
+     *
+     * @return     { description_of_the_return_value }
+     */
     public static int[][] readMatrix(final int row,
                                      final int column,
                                      final int[][] matrix) {
