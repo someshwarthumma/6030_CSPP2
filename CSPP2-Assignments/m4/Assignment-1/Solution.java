@@ -1,5 +1,7 @@
 import java.util.Scanner;
-//This is solution class
+/**
+ * This is solution class
+ */
 public final class Solution {
     /**.
      * Private constructor
@@ -12,7 +14,7 @@ public final class Solution {
      *
      * @param      args  Argument
      */
-    public static void main(String[] args) {
+    public static void main( final String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int max = 0;
