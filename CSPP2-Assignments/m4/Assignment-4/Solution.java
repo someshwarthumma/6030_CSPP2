@@ -28,7 +28,7 @@ public final class Solution {
      *
      * @return     return the reversed string
      */
-    public static final String reverseString(final String str) {
+    public static String reverseString(final String str) {
         String reverseStr = "";
         for (int i = 0; i < str.length(); i++) {
             reverseStr = str.charAt(i) + reverseStr;
