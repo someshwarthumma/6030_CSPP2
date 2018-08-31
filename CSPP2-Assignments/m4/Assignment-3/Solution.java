@@ -3,10 +3,10 @@ import java.util.Scanner;
  * Class for solution.
  */
 public final class Solution {
-	/*.
-	Do not modify this main function.
-	*/
-	private Solution(){
+	/**.
+	 * This is construction
+	 */
+	private Solution() {
 		//This is solution constructor
 	}
 	/**.
@@ -38,7 +38,7 @@ public final class Solution {
 		}
 		int sum = 0;
 		for (int i = s.length() - 1; i >= 0; i--) {
-			sum = sum + (int)(num[i] * Math.pow(2, ((s.length()) - (i + 1))));
+			sum = sum + (int) (num[i] * Math.pow(2, ((s.length()) - (i + 1))));
 		}
 		return sum;
 	}
