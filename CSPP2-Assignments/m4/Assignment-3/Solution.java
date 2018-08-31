@@ -15,13 +15,13 @@ public final class Solution {
      * @param      args  These are arguments
      */
     public static void main(final String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        sc.nextLine();
-        for (int i = 0; i < n; i++) {
-            String s = sc.nextLine();
-            int res = binaryToDecimal(s);
-            System.out.println(res);
+        Scanner scan = new Scanner(System.in);
+        int totalNumbers = scan.nextInt();
+        scan.nextLine();
+        for (int index = 0; index < totalNumbers; index++) {
+            String line = scan.nextLine();
+            int result = binaryToDecimal(line);
+            System.out.println(result);
         }
     }
     /**.
@@ -31,15 +31,15 @@ public final class Solution {
      *
      * @return     integer
      */
-    public static int binaryToDecimal(final String s) {
-        int[] num = new int[s.length()];
-        for (int i = 0; i < s.length(); i++) {
-            num[i] = Integer.parseInt(s.charAt(i) + "");
+    public static int binaryToDecimal(final String line) {
+        int[] numArray = new int[line.length()];
+        for (int index = 0; index < line.length(); index++) {
+            numArray[index] = Integer.parseInt(line.charAt(index) + "");
         }
         int sum = 0;
-        for (int i = s.length() - 1; i >= 0; i--) {
-            sum = sum + (int) (num[i] * Math.pow(2,
-                        ((s.length()) - (i + 1))));
+        for (int index = line.length() - 1; index >= 0; index--) {
+            sum = sum + (int) (numArray[index] * Math.pow(2,
+                        ((line.length()) - (index + 1))));
         }
         return sum;
     }
