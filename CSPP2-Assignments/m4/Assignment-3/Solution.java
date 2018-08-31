@@ -25,7 +25,7 @@ public class Solution
 		int sum = 0;
 		for(int i = s.length()-1;i>=0;i--){
 			sum = sum + (int)(num[i]*Math.pow(2,((s.length()) - (i +1))));
-		}
+		} 
 		return sum;
 	}
 
