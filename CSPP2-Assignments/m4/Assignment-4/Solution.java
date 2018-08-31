@@ -15,10 +15,10 @@ public final class Solution {
      * @param      args  Arguments
      */
     public static void main(final String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String s = sc.nextLine();
-        String reverse = reverseString(s);
-        System.out.println(reverse);
+        Scanner scan = new Scanner(System.in);
+        String str = scan.nextLine();
+        String reversedStr = reverseString(str);
+        System.out.println(reversedStr);
 
     }
     /**.
@@ -30,8 +30,8 @@ public final class Solution {
      */
     public static String reverseString(final String str) {
         String reverseStr = "";
-        for (int i = 0; i < str.length(); i++) {
-            reverseStr = str.charAt(i) + reverseStr;
+        for (int index = 0; index < str.length(); index++) {
+            reverseStr = str.charAt(index) + reverseStr;
         }
         return reverseStr;
     }
