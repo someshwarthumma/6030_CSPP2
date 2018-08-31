@@ -27,7 +27,7 @@ public final class Solution {
     /**.
      * { function_description }
      *
-     * @param      s     string
+     * @param      line     string
      *
      * @return     integer
      */
