@@ -27,9 +27,10 @@ final class Solution {
         // write ypur code here
         final int fifty = 50;
         final int hundred = 100;
+        final int sixHun = 600;
         for ( int row = 0; row < rows; row ++) {
             for (int column = 0; column < columns; column++) {
-                for ( int mulOf100 = 0; mulOf100 <= 600; mulOf100 = mulOf100 + 100) {
+                for ( int mulOf100 = 0; mulOf100 <= sixHun; mulOf100 = mulOf100 + hundred) {
                     if ((mulOf100 <= a[row][column]) && (a[row][column] < mulOf100 + fifty)) {
                         a[row][column] = mulOf100;
                     }
