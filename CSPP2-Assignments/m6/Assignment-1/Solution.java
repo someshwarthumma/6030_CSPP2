@@ -18,8 +18,8 @@ public final class Solution {
      * @param      number     n value
      */
     static void oddComposites(final int number) {
-        // write your code here
-        for (int index = 3; index <= number; index = index + 2) {
+        final int three = 3;
+        for (int index = three; index <= number; index = index + 2) {
             if (isNotPrime(index)) {
                 System.out.println(index);
             }
@@ -41,9 +41,8 @@ public final class Solution {
         }
         if (count == 2) {
             return false;
-        } else {
-            return true;
         }
+        return true;
     }
     /**.
     * main method as driver program.
@@ -55,4 +54,3 @@ public final class Solution {
         oddComposites(n);
     }
 }
-
