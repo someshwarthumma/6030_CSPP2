@@ -26,16 +26,16 @@ final class Solution {
 
         // write ypur code here
         final int fifty = 50;
-        final int hundred = 100;
+        final int hun = 100;
         final int sixHun = 600;
-        for (int row = 0; row < rows; row ++) {
-            for (int column = 0; column < columns; column++) {
-                for (int mulOf100 = 0; mulOf100 <= sixHun; mulOf100 = mulOf100 + hundred) {
-                    if ((mulOf100 <= a[row][column]) && (a[row][column] < mulOf100 + fifty)) {
-                        a[row][column] = mulOf100;
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < columns; col++) {
+                for (int mul100 = 0; mul100 <= sixHun; mul100 = mul100 + hun) {
+                    if ((mul100 <= a[row][col]) && (a[row][col] < mul100 + fifty)) {
+                        a[row][col] = mul100;
                     }
-                    if ((mulOf100 + fifty <= a[row][column]) && (a[row][column] < mulOf100 + hundred)) {
-                        a[row][column] = mulOf100 + hundred;
+                    if ((mul100 + fifty <= a[row][col]) && (a[row][col] < mul100 + hun)) {
+                        a[row][col] = mul100 + hun;
                     }
                 }
             }
