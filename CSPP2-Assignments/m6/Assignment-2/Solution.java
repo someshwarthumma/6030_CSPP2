@@ -1,18 +1,18 @@
 import java.util.Scanner;
-/**
+/**.
  * Write a java program to round the
  * elements of a matrix to the nearest 100.
  *
  * @author : 
  */
 final class Solution {
-    /**
+    /**.
      * Constructs the object.
      */
     private Solution() {
         //not used
     }
-    /**
+    /**.
      * Function to round the
      * elements of a matrix to the nearest 100.
      *
@@ -26,21 +26,22 @@ final class Solution {
 
 	// write ypur code here
     	final int fifty = 50;
-    	for ( int i=0; i< rows; i ++){
-    		for (int j =0;j <columns;j++){
-    			for( int k=0;k<=600;k = k+100){
-    				if ((k<=a[i][j])&&(a[i][j]<k+fifty)){
-    					a[i][j] = k;
+    	final int hundred = 100;
+    	for ( int row=0; row< rows; row ++){
+    		for (int column =0;column <columns;column++){
+    			for( int mulOf100=0;mulOf100<=600;mulOf100 = mulOf100+100){
+    				if ((mulOf100<=a[row][column])&&(a[row][column]<mulOf100+fifty)){
+    					a[row][column] = mulOf100;
     				}
-    				if((k+fifty<=a[i][j])&&(a[i][j]<k+fifty+fifty)){
-    					a[i][j] = k + fifty+fifty;
+    				if((mulOf100+fifty<=a[row][column])&&(a[row][column]<mulOf100+hundred)){
+    					a[row][column] = mulOf100 + hundred;
     				}
     			}
     		}
     	}
     	return a;
     }
-    /**
+    /**.
      * Main function.
      *
      * @param      args  The arguments
