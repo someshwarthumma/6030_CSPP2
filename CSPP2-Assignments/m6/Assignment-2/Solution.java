@@ -23,7 +23,9 @@ final class Solution {
      * @return     Matrix of the rounded elements
      */
 
-    static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
+    static int[][] roundHundred(final int[][] a, 
+                                final int rows, 
+                                final int columns) {
 
         // write ypur code here
         final int fifty = 50;
@@ -32,10 +34,12 @@ final class Solution {
         for (int row = 0; row < rows; row++) {
             for (int col = 0; col < columns; col++) {
                 for (int mul100 = 0; mul100 <= sixHun; mul100 = mul100 + hun) {
-                    if ((mul100 <= a[row][col]) && (a[row][col] < mul100 + fifty)) {
+                    if ((mul100 <= a[row][col]) &&
+                     (a[row][col] < mul100 + fifty)) {
                         a[row][col] = mul100;
                     }
-                    if ((mul100 + fifty <= a[row][col]) && (a[row][col] < mul100 + hun)) {
+                    if ((mul100 + fifty <= a[row][col]) && 
+                        (a[row][col] < mul100 + hun)) {
                         a[row][col] = mul100 + hun;
                     }
                 }
