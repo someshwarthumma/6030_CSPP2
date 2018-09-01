@@ -3,7 +3,7 @@ import java.util.Scanner;
  * Write a java program to round the
  * elements of a matrix to the nearest 100.
  *
- * @author : 
+ * @author :
  */
 final class Solution {
     /**.
@@ -24,22 +24,22 @@ final class Solution {
      */
     static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
 
-	// write ypur code here
-    	final int fifty = 50;
-    	final int hundred = 100;
-    	for ( int row=0; row< rows; row ++){
-    		for (int column =0;column <columns;column++){
-    			for( int mulOf100=0;mulOf100<=600;mulOf100 = mulOf100+100){
-    				if ((mulOf100<=a[row][column])&&(a[row][column]<mulOf100+fifty)){
-    					a[row][column] = mulOf100;
-    				}
-    				if((mulOf100+fifty<=a[row][column])&&(a[row][column]<mulOf100+hundred)){
-    					a[row][column] = mulOf100 + hundred;
-    				}
-    			}
-    		}
-    	}
-    	return a;
+        // write ypur code here
+        final int fifty = 50;
+        final int hundred = 100;
+        for ( int row = 0; row < rows; row ++) {
+            for (int column = 0; column < columns; column++) {
+                for ( int mulOf100 = 0; mulOf100 <= 600; mulOf100 = mulOf100 + 100) {
+                    if ((mulOf100 <= a[row][column]) && (a[row][column] < mulOf100 + fifty)) {
+                        a[row][column] = mulOf100;
+                    }
+                    if ((mulOf100 + fifty <= a[row][column]) && (a[row][column] < mulOf100 + hundred)) {
+                        a[row][column] = mulOf100 + hundred;
+                    }
+                }
+            }
+        }
+        return a;
     }
     /**.
      * Main function.
