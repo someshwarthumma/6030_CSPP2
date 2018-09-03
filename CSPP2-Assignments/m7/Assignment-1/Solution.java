@@ -3,11 +3,11 @@ import java.util.Scanner;
  * This is input validator class, it validates the input
  */
 class InputValidator {
-    /**
+    /**.
      * This is variable for holding the value of a variable
      */
     String value;
-    /**
+    /**.
      * Constructs the object.
      *
      * @param      input  The input
@@ -21,7 +21,7 @@ class InputValidator {
      * @return     { Boolean value }
      */
     boolean validateData() {
-        /**
+        /**.
          * This is temporary variable
          */
         String x = this.value;
@@ -36,6 +36,9 @@ class InputValidator {
  * This is solution class
  */
 public class Solution {
+    /**.
+     * { This is main method }
+     */
     public static void main(String args[]) {
         Scanner s = new Scanner(System.in);
         String input = s.next();
