@@ -4,6 +4,11 @@ import java.util.Scanner;
  */
 class InputValidator {
     String value;
+    /**
+     * Constructs the object.
+     *
+     * @param      input  The input
+     */
     InputValidator(String input) {
         this.value = input;
     }
