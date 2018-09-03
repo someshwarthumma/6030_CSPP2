@@ -4,15 +4,9 @@ import java.util.Scanner;
  */
 class InputValidator {
     /**.
-     * This is constructor
-     */
-    private InputValidator() {
-        //This is constructor
-    }
-    /**.
      * This is variable for holding the value of a variable
      */
-    String value;
+    private String value;
     /**.
      * Constructs the object.
      *
