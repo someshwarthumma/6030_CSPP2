@@ -49,10 +49,10 @@ public final class Solution {
      * @param      args  Argument
      */
     public static void main(final String[] args) {
-        Scanner s = new Scanner(System.in);
-        String input = s.next();
-        InputValidator i = new InputValidator(input);
-        System.out.println(i.validateData());
+        Scanner scan = new Scanner(System.in);
+        String input = scan.next();
+        InputValidator inPut = new InputValidator(input);
+        System.out.println(inPut.validateData());
 
     }
 
