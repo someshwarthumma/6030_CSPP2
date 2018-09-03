@@ -6,7 +6,7 @@ class InputValidator {
     /**.
      * This is constructor
      */
-    private InputValidator(){
+    private InputValidator() {
         //This is constructor
     }
     /**.
