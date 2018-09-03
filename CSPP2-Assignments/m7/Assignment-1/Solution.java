@@ -3,13 +3,16 @@ import java.util.Scanner;
  * This is input validator class, it validates the input
  */
 class InputValidator {
+    /**
+     * This is variable for holding the value of a variable
+     */
     String value;
     /**
      * Constructs the object.
      *
      * @param      input  The input
      */
-    InputValidator(String input) {
+    InputValidator(final String input) {
         this.value = input;
     }
     /**.
@@ -18,6 +21,9 @@ class InputValidator {
      * @return     { Boolean value }
      */
     boolean validateData() {
+        /**
+         * This is temporary variable
+         */
         String x = this.value;
         int sum = x.length();
         if (sum >= 6) {
