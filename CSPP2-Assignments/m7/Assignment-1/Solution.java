@@ -42,11 +42,11 @@ class InputValidator {
 /**.
  * This is solution class
  */
-public class Solution {
+public final class Solution {
     /**.
      * Constructs the object.
      */
-    private Solution(){
+    private Solution() {
         //This is solution
     }
     /**.
