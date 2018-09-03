@@ -4,6 +4,12 @@ import java.util.Scanner;
  */
 class InputValidator {
     /**.
+     * This is constructor
+     */
+    private InputValidator(){
+        //This is constructor
+    }
+    /**.
      * This is variable for holding the value of a variable
      */
     String value;
@@ -26,7 +32,8 @@ class InputValidator {
          */
         String x = this.value;
         int sum = x.length();
-        if (sum >= 6) {
+        final int six = 6;
+        if (sum >= six) {
             return true;
         }
         return false;
@@ -36,7 +43,7 @@ class InputValidator {
  * This is solution class
  */
 public class Solution {
-    /**
+    /**.
      * This is main method
      *
      * @param      args  Argument
