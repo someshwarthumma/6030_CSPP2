@@ -1,7 +1,8 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-import java.util.Arrays;
-
+/**.
+ * List of .
+ */
 public class List {
     //Implement all the methods mentioned to build a ListADT
 
