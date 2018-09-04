@@ -347,7 +347,8 @@ public class List {
             switch (tokens[0]) {
             case "add":
                 try {
-                    l.add(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]));
+                    l.add(Integer.parseInt(tokens[1])
+                    ,Integer.parseInt(tokens[2]));
                     break;
                 } catch (Exception e) {
                     l.add(Integer.parseInt(tokens[1]));
