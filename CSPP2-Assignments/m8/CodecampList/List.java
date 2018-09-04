@@ -101,16 +101,16 @@ public class List {
      *
      * The method returns void (nothing)
      */
-    public  void addAll(final int[] items){
-        for(int i =0; i<items.length;i++){
+    public  void addAll(final int[] items) {
+        for (int i = 0; i < items.length; i++) {
             add(items[i]);
         }
     }
 
-    public int count(int item){
+    public int count(int item) {
         int counter = 0;
-        for(int i=0;i<size;i++){
-            if (item==array[i]){
+        for (int i = 0; i < size; i++) {
+            if (item == array[i]) {
                 counter++;
             }
         }
@@ -131,26 +131,25 @@ public class List {
 
 
     }
-    public void add(final int index, final int item){
-        if (index<size){
-            int[] list3 = new int[size-index];
-            int j =0;
-            for (int i =index; i<size;i++){
+    public void add(final int index, final int item) {
+        if (index < size) {
+            int[] list3 = new int[size - index];
+            int j = 0;
+            for (int i = index; i < size; i++) {
                 list3[j] = array[i];
                 j++;
             }
             j = 0;
             array[index] = item;
             size++;
-            for (int i=index+1; i<size;i++){
-                array[i]=list3[j];
+            for (int i = index + 1; i < size; i++) {
+                array[i] = list3[j];
                 j++;
             }
-        }
-        else{
+        } else {
             System.out.println("Invalid index");
         }
-        
+
     }
 
     /*
@@ -348,10 +347,9 @@ public class List {
             switch (tokens[0]) {
             case "add":
                 try {
-                    l.add(Integer.parseInt(tokens[1]),Integer.parseInt(tokens[2]));
+                    l.add(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]));
                     break;
-                }
-                catch(Exception e){
+                } catch (Exception e) {
                     l.add(Integer.parseInt(tokens[1]));
                     break;
                 }
@@ -381,9 +379,9 @@ public class List {
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
             case "addAll":
-                int[] templist = new int[tokens.length-1];
-                for(int i =0; i<tokens.length-1;i++){
-                    templist[i]=Integer.parseInt(tokens[i+1]);
+                int[] templist = new int[tokens.length - 1];
+                for (int i = 0; i < tokens.length - 1; i++) {
+                    templist[i] = Integer.parseInt(tokens[i + 1]);
                 }
                 l.addAll(templist);
                 System.out.println(l.tostring());
