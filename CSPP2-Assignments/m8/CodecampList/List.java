@@ -138,7 +138,7 @@ public class List {
     			array[i] = array[i+1];
     		}
     	}else{
-    		System.out.println("Index Out");
+    		System.out.println("Invalid position Exception");
     	}
 
         // write the logic for remove here.
