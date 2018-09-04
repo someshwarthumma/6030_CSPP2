@@ -31,7 +31,7 @@ public class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
-    
+
     /**.
      * { var_description }
      */
@@ -59,7 +59,7 @@ public class List {
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
-    
+
     /**.
      * { var_description }
      */
@@ -68,7 +68,7 @@ public class List {
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
-    
+
     /**.
      * Constructs the object.
      */
@@ -100,7 +100,7 @@ public class List {
      *
      * The method returns void (nothing)
      */
-    
+
     /**.
      * { function_description }
      *
@@ -123,7 +123,7 @@ public class List {
      *
      * The method returns an int. Empty list should return 0.
      */
-    
+
     /**.
      * { function_description }
      *
@@ -154,7 +154,7 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-    
+
     /**.
      * { function_description }
      *
@@ -187,7 +187,7 @@ public class List {
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
-    
+
     /**.
      * { function_description }
      *
@@ -223,7 +223,7 @@ public class List {
      * not all the elements of the array.
      *
      */
-    
+
     /**.
      * { function_description }
      *
@@ -245,7 +245,7 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
-    
+
     /**.
      * { function_description }
      *
@@ -267,7 +267,7 @@ public class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
-    
+
     /**.
      * Searches for the first match.
      *
