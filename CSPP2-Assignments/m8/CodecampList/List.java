@@ -232,7 +232,7 @@ public class List {
     public String tostring() {
         int[] listTemp = new int[size];
         String list3 = "[";
-        for (int i = 0; i < size - 1; i++){
+        for (int i = 0; i < size - 1; i++) {
             list3 = list3 + array[i] + ",";
         }
         list3 = list3 + array[size - 1] + "]";
@@ -256,7 +256,7 @@ public class List {
      */
     public boolean contains(final int item) {
         // Replace the code below
-        for (int i = 0; i < size; i++){
+        for (int i = 0; i < size; i++) {
             if (item == array[i]) {
                 return true;
             }
@@ -280,7 +280,7 @@ public class List {
     public int indexOf(final int item) {
         // Replace the code below
         if (contains(item)) {
-            for (int i = 0; i < size; i++){
+            for (int i = 0; i < size; i++) {
                 if (array[i] == item) {
                     return i;
                 }
