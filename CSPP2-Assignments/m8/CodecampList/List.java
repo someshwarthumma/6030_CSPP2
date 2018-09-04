@@ -101,6 +101,8 @@ public class List {
      *
      * The method returns void (nothing)
      */
+
+    /**
     public  void addAll(final int[] items) {
         for (int i = 0; i < items.length; i++) {
             add(items[i]);
@@ -116,6 +118,7 @@ public class List {
         }
         return counter;
     }
+    **/
 
     /**.
      * { function_description }
@@ -131,6 +134,7 @@ public class List {
 
 
     }
+    /*
     public void add(final int index, final int item) {
         if (index < size) {
             int[] list3 = new int[size - index];
@@ -150,7 +154,7 @@ public class List {
             System.out.println("Invalid index");
         }
 
-    }
+    }*/
 
     /*
      * The size method returns the value of the size.
@@ -346,14 +350,16 @@ public class List {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
             case "add":
-                try {
+                /*try {
                     l.add(Integer.parseInt(tokens[1])
                     ,Integer.parseInt(tokens[2]));
                     break;
-                } catch (Exception e) {
-                    l.add(Integer.parseInt(tokens[1]));
-                    break;
-                }
+                } */
+                /*catch (Exception e) {*/
+
+                l.add(Integer.parseInt(tokens[1]));
+                break;
+                /*}*/
             case "size":
                 // invoke size method and print the list size
                 // BTW, list size is not the array size
@@ -379,17 +385,17 @@ public class List {
             case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
-            case "addAll":
+            /*case "addAll":
                 int[] templist = new int[tokens.length - 1];
                 for (int i = 0; i < tokens.length - 1; i++) {
                     templist[i] = Integer.parseInt(tokens[i + 1]);
                 }
                 l.addAll(templist);
                 System.out.println(l.tostring());
-                break;
-            case "count":
+                break;*/
+            /*case "count":
                 System.out.println(l.count(Integer.parseInt(tokens[1])));
-                break;
+                break;*/
             default:
             }
         }
