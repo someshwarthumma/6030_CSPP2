@@ -188,7 +188,7 @@ public class List {
     	int[] listTemp = new int[size];
     	String list3 = "[";
     	for (int i=0;i<size;i++)
-    		list3 = list3+array[i];
+    		list3 = list3+array[i]+",";
     	list3 = list3 +"]";
     	return list3;
         
