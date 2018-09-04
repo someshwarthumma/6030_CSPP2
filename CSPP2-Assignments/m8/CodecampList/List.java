@@ -187,9 +187,8 @@ public class List {
      */
     public String tostring() {
         int[] listTemp = new int[size];
-        int i;
         String list3 = "[";
-        for (i = 0; i < size - 1; i++)
+        for (int i = 0; i < size - 1; i++)
             list3 = list3 + array[i] + ",";
         list3 = list3 + array[size - 1] + "]";
         return list3;
