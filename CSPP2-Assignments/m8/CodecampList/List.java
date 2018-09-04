@@ -190,7 +190,7 @@ public class List {
     	String list3 = "[";
     	for (i=0;i<size-1;i++)
     		list3 = list3+array[i]+",";
-    	list3 = list3 +array[size]+"]";
+    	list3 = list3 +array[size-1]+"]";
     	return list3;
         
     } 
