@@ -186,9 +186,11 @@ public class List {
      */
     public String tostring() {
     	int[] listTemp = new int[size];
+    	String list3 = "[";
     	for (int i=0;i<size;i++)
-    		listTemp[i] = array[i];
-    	return Arrays.toString(listTemp);
+    		list3 = list3+array[i];
+    	list3 = list3 +"]";
+    	return list3;
         
     } 
     
