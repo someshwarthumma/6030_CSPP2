@@ -48,11 +48,14 @@ public final class Fibonacci {
         int latest = 1;
         l.add(previous);
         int temp = 0;
-        for (int i = 0; l.size < n; i++) {
+        for (int i = 0; i < n; i++) {
             l.add(latest);
+            System.out.println(l.tostring());
             temp = latest;
             latest = latest + previous;
             previous = temp;
+            System.out.println(l.size);
+            System.out.println(latest);
 
         }
 
