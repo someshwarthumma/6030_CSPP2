@@ -43,20 +43,20 @@ public final class Fibonacci {
      */
     public static List fib(final int n) {
         // todo - complete this method
-        List l = new List();
+        List l = new List(n);
         int previous = 0;
         int latest = 1;
         l.add(previous);
         int temp = 0;
         for (int i = 0; i < n; i++) {
             l.add(latest);
-            System.out.println(l.tostring());
+            //System.out.println(l.tostring());
             temp = latest;
             latest = latest + previous;
             previous = temp;
-            System.out.println(l.size);
+            /*System.out.println(l.size);
             System.out.println(latest);
-
+*/
         }
 
         return l;
