@@ -97,6 +97,45 @@ public class List {
         size = 0;
         list = new int[capacity];
     }
+
+
+    public  void addAll(final int[] items) {
+        for (int i = 0; i < items.length; i++) {
+            add(items[i]);
+        }
+    }
+
+    public int count(int item) {
+        int counter = 0;
+        for (int i = 0; i < size; i++) {
+            if (item == list[i]) {
+                counter++;
+            }
+        }
+        return counter;
+    }
+    
+
+    public void add(final int index, final int item) {
+        if (index < size) {
+            int[] list3 = new int[size - index];
+            int j = 0;
+            for (int i = index; i < size; i++) {
+                list3[j] = list[i];
+                j++;
+            }
+            j = 0;
+            list[index] = item;
+            size++;
+            for (int i = index + 1; i < size; i++) {
+                list[i] = list3[j];
+                j++;
+            }
+        } else {
+            System.out.println("Invalid index");
+        }
+
+    }
     
     /*
      * The add method does what the name suggests.
@@ -267,7 +306,7 @@ public class List {
     }
    /*Inserts all the elements of specified int 
     array to the end of list*/
-    public void addAll(int items[])
+    /*/*public void addAll(int items[])
     {
         // write the logic 
     }
@@ -277,16 +316,16 @@ public class List {
 	by moving all the elements to the right.
         The method returns void (nothing)
      */
-    public void add(int index,int item) {
+    /*public void add(int index,int item) {
          // write the logic 
-    }
+    }*/
     
     /* Returns the count of occurances of a given item in the list*/
-    public int count(int item)
+   /* public int count(int item)
     {
          // write the logic 
         return 0;
-    }
+    }*/
 
 
 	public static void main(String[] args) {
