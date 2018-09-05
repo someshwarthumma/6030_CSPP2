@@ -132,7 +132,7 @@ public class List {
                 j++;
             }
         } else {
-            System.out.println("Invalid index");
+            System.out.println("Negative Index Exception");
         }
 
     }
