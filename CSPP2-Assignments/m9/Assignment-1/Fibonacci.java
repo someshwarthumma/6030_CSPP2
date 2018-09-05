@@ -37,7 +37,7 @@ public final class Fibonacci {
     /**.
      * { This is method is to print the fibonacci in a list }
      *
-     * @param      n     { integer }
+     * @param      number     { integer }
      *
      * @return     { a list datatype }
      */
