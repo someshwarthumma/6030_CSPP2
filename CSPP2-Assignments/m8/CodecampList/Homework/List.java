@@ -117,7 +117,7 @@ public class List {
     
 
     public void add(final int index, final int item) {
-        if (index < size && index >=0) {
+        if (index <=size && index >=0) {
             int[] list3 = new int[size - index];
             int j = 0;
             for (int i = index; i < size; i++) {
