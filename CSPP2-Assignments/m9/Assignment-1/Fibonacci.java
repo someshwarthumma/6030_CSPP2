@@ -66,6 +66,6 @@ public final class Fibonacci {
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
-        System.out.println(fib(n));
+        System.out.println(fib(n).tostring());
     }
 }
