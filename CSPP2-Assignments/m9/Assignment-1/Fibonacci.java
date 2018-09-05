@@ -17,14 +17,14 @@ import java.util.Scanner;
  * by invoking the add method provided in the List ADT.
  *
  */
-/**
+/**.
  * This is a Fibanacci class
  */
-public class Fibonacci {
+public final class Fibonacci {
     /**.
      * This is constructor object
      */
-    private Fibonacci(){
+    private Fibonacci() {
         //This is contructor
     }
     /*
@@ -41,7 +41,7 @@ public class Fibonacci {
      *
      * @return     { a list datatype }
      */
-    public static List fib(int n) {
+    public static List fib(final int n) {
         // todo - complete this method
         List l = new List();
         int previous = 0;
@@ -63,7 +63,7 @@ public class Fibonacci {
      *
      * @param      args  Argument
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         System.out.println(fib(n));
