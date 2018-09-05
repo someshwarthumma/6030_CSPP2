@@ -41,14 +41,14 @@ public final class Fibonacci {
      *
      * @return     { a list datatype }
      */
-    public static List fib(final int n) {
+    public static List fib(final int number) {
         // todo - complete this method
-        List l = new List(n);
+        List l = new List(number);
         int previous = 0;
         int latest = 1;
         l.add(previous);
         int temp = 0;
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; l.size < number; i++) {
             l.add(latest);
             //System.out.println(l.tostring());
             temp = latest;
@@ -67,8 +67,8 @@ public final class Fibonacci {
      * @param      args  Argument
      */
     public static void main(final String[] args) {
-        Scanner s = new Scanner(System.in);
-        int n = s.nextInt();
-        System.out.println(fib(n).tostring());
+        Scanner scan = new Scanner(System.in);
+        int number = scan.nextInt();
+        System.out.println(fib(number).tostring());
     }
 }
