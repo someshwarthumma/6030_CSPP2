@@ -31,6 +31,10 @@ public final class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
+    
+    /**.
+     * This is list array
+     */
     private int[] list;
 
     /*
@@ -56,6 +60,10 @@ public final class List {
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
+    
+    /**.
+     * This is size
+     */
     private int size;
 
     /*
@@ -74,7 +82,8 @@ public final class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        list = new int[1000];
+        final int ten = 1000;
+        list = new int[ten];
 
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
@@ -188,7 +197,7 @@ public final class List {
      * Resize the list
      * Sometimes the clients of the ADT won't know the expected list capacity
      * To solve this the list has to grow dynamically
-     * when the maximum capacity is reached and there is no room to add items.
+     * when the maximum capacity is reached and there is no room to add items
      * So, how do we dynamically resize the list?
      * Java doesn't support resize of array. Here are some options.
      *
@@ -202,15 +211,15 @@ public final class List {
      * with the contents of the original array.
      *
      * TODO
-     * Create a method called resize(). Resize should create an new array that is
-     * double the size of the old array.
+     * Create a method called resize(). Resize should create an new array 
+     * that is double the size of the old array.
      * Then copy the contents of the old array to the new one.
      *
      * When should the resize method be invoked and from where?
      * Will the client invoke resize or is it internal to List class?
      * Should the resize be public method or private?
      * Should the resize method return any values?
-     * You know enough of Object Oriented Programming to answer these questions :-)
+     * You know enough of Object Oriented Programming to answer these question
      *
      */
 
@@ -223,7 +232,7 @@ public final class List {
      *
      * The method returns an int. Empty list should return 0.
      */
-    /**
+    /**.
      * This return the size of the array
      *
      * @return     { size of the array in integer }
@@ -327,8 +336,9 @@ public final class List {
      * @return     String representation of the object.
      */
     public String toString() {
-        if (size == 0)
+        if (size == 0){
             return "[]";
+        }
         String str = "[";
         int i = 0;
         for (i = 0; i < size - 1; i++) {
@@ -345,8 +355,8 @@ public final class List {
      * the item exists and otherwise false
      */
 
-    /**
-     * This is 
+    /**.
+     * This is
      *
      * @param      item  The item
      *
@@ -361,7 +371,7 @@ public final class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
-    /**
+    /**.
      * This returns the index of the given element
      *
      * @param      item  The item
@@ -370,15 +380,20 @@ public final class List {
      */
     public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
-            if (item == list[i])
+            if (item == list[i]){
                 return i;
+            }
         }
         return -1;
     }
-    
 
 
-    public static void main(String[] args) {
+    /**
+     * This is main method
+     *
+     * @param      args  arguments
+     */
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -398,8 +413,10 @@ public final class List {
                     if (t.length == 1) {
                         l.add(Integer.parseInt(tokens[1]));
                     } else {
-                        if (t.length > 1)
-                            l.add(Integer.parseInt(t[0]), Integer.parseInt(t[1]));
+                        if (t.length > 1){
+                            l.add(Integer.parseInt(t[0])
+                                , Integer.parseInt(t[1]));
+                        }
                     }
                 }
                 break;
@@ -439,6 +456,7 @@ public final class List {
             case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
+            default:
             }
         }
     }
