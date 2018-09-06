@@ -48,7 +48,8 @@ class Student {
  * This is solution class
  */
 public class Solution {
-    private static Scanner stdin = new Scanner(new BufferedInputStream(System.in));
+    private static Scanner stdin = new
+    Scanner(new BufferedInputStream(System.in));
 
     /**
      * This is tempFunS funtion.
