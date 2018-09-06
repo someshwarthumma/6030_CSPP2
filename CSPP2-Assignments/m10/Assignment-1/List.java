@@ -31,7 +31,7 @@ public final class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
-    
+
     /**.
      * This is list array
      */
@@ -60,7 +60,7 @@ public final class List {
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
-    
+
     /**.
      * This is size
      */
@@ -211,7 +211,7 @@ public final class List {
      * with the contents of the original array.
      *
      * TODO
-     * Create a method called resize(). Resize should create an new array 
+     * Create a method called resize(). Resize should create an new array
      * that is double the size of the old array.
      * Then copy the contents of the old array to the new one.
      *
@@ -336,7 +336,7 @@ public final class List {
      * @return     String representation of the object.
      */
     public String toString() {
-        if (size == 0){
+        if (size == 0) {
             return "[]";
         }
         String str = "[";
@@ -380,7 +380,7 @@ public final class List {
      */
     public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
-            if (item == list[i]){
+            if (item == list[i]) {
                 return i;
             }
         }
@@ -388,7 +388,7 @@ public final class List {
     }
 
 
-    /**
+    /**.
      * This is main method
      *
      * @param      args  arguments
@@ -413,9 +413,9 @@ public final class List {
                     if (t.length == 1) {
                         l.add(Integer.parseInt(tokens[1]));
                     } else {
-                        if (t.length > 1){
+                        if (t.length > 1) {
                             l.add(Integer.parseInt(t[0])
-                                , Integer.parseInt(t[1]));
+                                ,Integer.parseInt(t[1]));
                         }
                     }
                 }
@@ -427,8 +427,9 @@ public final class List {
                 if (tokens.length == 2) {
                     String[] t1 = tokens[1].split(",");
                     int temp[] = new int[t1.length];
-                    for (int i = 0; i < temp.length; i++)
+                    for (int i = 0; i < temp.length; i++) {
                         temp[i] = Integer.parseInt(t1[i]);
+                    }
                     l.addAll(temp);
                 }
                 break;
