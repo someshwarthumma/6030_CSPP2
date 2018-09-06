@@ -3,7 +3,7 @@ import java.util.Scanner;
 /**.
  * This is a list class
  */
-public class List {
+public final class List {
     //Implement all the methods mentioned to build a ListADT
 
     /*
@@ -102,7 +102,7 @@ public class List {
      *
      * @param      capacity  required size of array
      */
-    public List(int capacity) {
+    public List(final int capacity) {
         size = 0;
         list = new int[capacity];
     }
@@ -125,7 +125,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public int count(int item) {
+    public int count(final int item) {
         int counter = 0;
         for (int i = 0; i < size; i++) {
             if (item == list[i]) {
@@ -178,7 +178,7 @@ public class List {
      *
      * @param      item   item
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the zelist.
         list[size++] = item;
     }
@@ -258,7 +258,7 @@ public class List {
      *
      * @param      index   index
      */
-    public void remove(int index) {
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if (index >= 0 && index < size) {
@@ -293,7 +293,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public int get(int index) {
+    public int get(final int index) {
         if (index < 0 || index >= size) {
             return -1;
         } else {
@@ -352,7 +352,7 @@ public class List {
      *
      * @return     { boolean }
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         return indexOf(item) == -1;
     }
 
@@ -368,7 +368,7 @@ public class List {
      *
      * @return     { integer }
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
             if (item == list[i])
                 return i;
