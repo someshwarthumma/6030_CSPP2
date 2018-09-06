@@ -31,7 +31,6 @@ class Student {
 
     @Override
     public boolean equals(final Object other) {
-    
     //This method is to check if two students names are equal or not
         if (!(other instanceof Student)) {
             return false;
@@ -49,7 +48,7 @@ class Student {
         return this.name;
     }
     @Override
-    public int hashCode(){
+    public int hashCode() {
         return 0;
     }
 }
