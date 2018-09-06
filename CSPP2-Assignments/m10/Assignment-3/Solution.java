@@ -2,17 +2,21 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 //A Class is implemented for Student details
 
-/**
+/**.
  * This is student class
  */
 class Student {
+    /**
+     * This is a name
+     */
     private String name;
     /**.
      * This is student constructor
      *
      * @param      name  name
      */
-    public Student(String name) {//A constructor used to initialize the instance variables
+    public Student(String name) {
+    //A constructor used to initialize the instance variables
         this.name = name;
     }
     /**.
@@ -20,12 +24,14 @@ class Student {
      *
      * @return     String
      */
-    public String getName() {//Getter method which returns the value of instance variable
+    public String getName() {
+    //Getter method which returns the value of instance variable
         return this.name;
     }
 
     @Override
-    public boolean equals(Object other) { //This method is to check if two students names are equal or not
+    public boolean equals(Object other) {
+    //This method is to check if two students names are equal or not
         if (!(other instanceof Student)) {
             return false;
         }
