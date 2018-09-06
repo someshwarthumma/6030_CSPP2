@@ -13,7 +13,7 @@ class Student {
     /**.
      * This is student constructor
      *
-     * @param      name  name
+     * @param      name1  name
      */
     Student(final String name1) {
     //A constructor used to initialize the instance variables
@@ -53,11 +53,11 @@ class Student {
 /**.
  * This is solution class
  */
-public class Solution {
+public final class Solution {
     /**.
      * Constructs the Solution.
      */
-    private Solution(){
+    private Solution() {
         //THis is contructor
     }
 
@@ -195,7 +195,7 @@ public class Solution {
             case "addAll":
                 if (tokens.length == 2) {
                     String[] t1 = tokens[1].split(",");
-                    Float temp[] = new Float[t1.length];
+                    Float[] temp = new Float[t1.length];
                     for (int i = 0; i < t1.length; i++) {
                         temp[i] = Float.parseFloat(t1[i]);
                     }
@@ -310,7 +310,7 @@ public class Solution {
                 if (tokens.length == 2) {
                     String[] t1 = tokens[1].split(",");
                     Double[] temp = new Double[t1.length];
-                    for (int i = 0; i < t1.length ;i++) {
+                    for (int i = 0; i < t1.length; i++) {
                         temp[i] = Double.parseDouble(t1[i]);
                     }
                     listDouble.addAll(temp);
@@ -405,12 +405,12 @@ public class Solution {
             }
         }
     }
-    /**
+    /**.
      * This is main funtion
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         String objectType = stdin.nextLine();
 
