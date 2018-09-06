@@ -1,11 +1,18 @@
 //This is solution to implement the Assigment-2_module-10
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-/**
+/**.
  * This is solution for the class  to implement ListADT of type String
  */
 public class Solution {
-    /**
+    /**.
+     * This is private construtor
+     */
+    private Solution(){
+        //This is solution
+    }
+
+    /**.
      * { This is solution claass }
      *
      * @param      args  Argument
