@@ -84,7 +84,7 @@ public class List<E> {
             }
             size--;
         } else {
-            System.out.println("Invalid position Exception");
+            System.out.println("Invalid Position Exception");
         }
 
     }
