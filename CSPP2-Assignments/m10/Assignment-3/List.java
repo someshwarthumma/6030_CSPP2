@@ -10,8 +10,8 @@ import java.util.Scanner;
      * So, when we do not what we are going to have in the list
      * We need to create a Generic list to store the items
 
-     * Here E is a type parameter, and it will be replaced with 
-        actual type when the object got created. 
+     * Here E is a type parameter, and it will be replaced with
+        actual type when the object got created.
      */
 public class List<E> {
     private E[] list;
@@ -40,10 +40,10 @@ public class List<E> {
         //You can modify the code in this method.
         list[(size++)] = item;
     }
-    /*Inserts all the elements of specified int 
+    /*Inserts all the elements of specified int
     array to the end of list*/
     public void addAll(E[] items) {
-        for(int i =0;i<items.length;i++){
+        for (int i = 0; i < items.length; i++) {
             add(items[i]);
         }
     }
@@ -51,7 +51,7 @@ public class List<E> {
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
      * to the objects outside the list
-     * 
+     *
      * The method returns an int. Empty list should return 0.
      */
     public int size() {
@@ -61,7 +61,7 @@ public class List<E> {
      * The remove method does what the name suggests.
      * Removes a String item, specified by the index argument, from the list
      * It also does an additional step.
-     * Think about what happens when 
+     * Think about what happens when
      * an item is removed from the middle of the list
      * It creates a hole in the list, right?
      * This would mean, all the items that are
@@ -78,10 +78,15 @@ public class List<E> {
      * The method returns void (nothing)
      */
     public void remove(int index) {
-        for(int i = index;i<size-1;i++){
-            list[i]=list[i+1];
+        if (index >= 0 && index < size) {
+            for (int i = index; i < size - 1; i++) {
+                list[i] = list[i + 1];
+            }
+            size--;
+        } else {
+            System.out.println("Invalid position Exception");
         }
-        size--;
+
     }
     /*
      * Get method has to return the items that is
@@ -91,17 +96,17 @@ public class List<E> {
      * How can an element not be there at a given position?
      * Well, if the position is greater than the number of items
      * in the list then that would mean the item doesn't exist.
-     * How do we check if the position is greater than the 
+     * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
     public E get(int index) {
-         //Write logic for get method
-        if(index>=size && index <0){
+        //Write logic for get method
+        if (index >= size && index < 0) {
             return list[index];
-        }else{
+        } else {
             return null;
         }
-        
+
     }
     /*
      * What happens when you print an object using println?
@@ -112,7 +117,7 @@ public class List<E> {
      * System.out.println(l);
      * This statement is a shortcut for
      * System.out.println(l.toString());
-     * 
+     *
      * So, implement the toString method to display the items
      * in the list in the square brackets notation.
      * i.e., if the list has numbers 1, 2, 3
@@ -124,14 +129,14 @@ public class List<E> {
      *
      */
     public String toString() {
-        if(size ==0){
+        if (size == 0) {
             return "[]";
         }
         String str = "[";
-        for (int i=0;i<size-1;i++){
-            str += list[i]+",";
+        for (int i = 0; i < size - 1; i++) {
+            str += list[i] + ",";
         }
-        return str+list[size-1]+"]";
+        return str + list[size - 1] + "]";
     }
     /*
      * Contains return true if the list has
@@ -140,22 +145,22 @@ public class List<E> {
      * the item exists and otherwise false
      */
     public boolean contains(E item) {
-		if(indexOf(item)== -1){
+        if (indexOf(item) == -1) {
             return false;
         }
         return true;
     }
     /*
-     * Returns the index of the first occurrence 
+     * Returns the index of the first occurrence
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
     public int indexOf(E item) {
-       for(int i =0;i<size;i++){
-        if(list[i]==item){
-            return i;
+        for (int i = 0; i < size; i++) {
+            if (list[i] == item) {
+                return i;
+            }
         }
-       }
-       return -1;
+        return -1;
     }
 }
