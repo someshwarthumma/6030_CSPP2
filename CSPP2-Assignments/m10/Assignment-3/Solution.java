@@ -1,13 +1,25 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 //A Class is implemented for Student details
+
+/**
+ * This is student class
+ */
 class Student {
     private String name;
-
+    /**.
+     * This is student constructor
+     *
+     * @param      name  name
+     */
     public Student(String name) {//A constructor used to initialize the instance variables
         this.name = name;
     }
-
+    /**.
+     * This is getName
+     *
+     * @return     String
+     */
     public String getName() {//Getter method which returns the value of instance variable
         return this.name;
     }
@@ -21,16 +33,26 @@ class Student {
         Student that = (Student) other;
         return this.getName().equals(that.getName());
     }
-
+    /**.
+     * To print the array
+     *
+     * @return     String
+     */
     public String toString() {
         return this.name;
     }
 }
 
 
-
+/**.
+ * This is solution class
+ */
 public class Solution {
     private static Scanner stdin = new Scanner(new BufferedInputStream(System.in));
+
+    /**
+     * This is tempFunS funtion.
+     */
     public static void tempFunS() {
         List<String> listString = new List();
         while (stdin.hasNext()) {
@@ -80,6 +102,9 @@ public class Solution {
         }
     }
 
+    /**
+     * { This is tempFunI funtion. }
+     */
     public static void tempFunI() {
         List<Integer> listInteger = new List();
         while (stdin.hasNext()) {
@@ -130,7 +155,9 @@ public class Solution {
             }
         }
     }
-
+    /**
+     * { This is tempFunF funtion. }
+     */
     public static void tempFunF() {
         List<Float> listFloat = new List();
         while (stdin.hasNext()) {
@@ -181,7 +208,9 @@ public class Solution {
             }
         }
     }
-
+    /**
+     * { This is tempFunC funtion. }
+     */
     public static void tempFunC() {
         List<Character> listCharacter = new List();
         while (stdin.hasNext()) {
@@ -232,7 +261,9 @@ public class Solution {
             }
         }
     }
-
+    /**
+     * This is tempFunD funtion.
+     */
     public static void tempFunD() {
         List<Double> listDouble = new List();
         while (stdin.hasNext()) {
@@ -283,7 +314,9 @@ public class Solution {
             }
         }
     }
-
+    /**
+     * This is tempFunO funtion.
+     */
     public static void tempFunO() {
         List<Student> listStudent = new List();
         while (stdin.hasNext()) {
@@ -334,7 +367,11 @@ public class Solution {
             }
         }
     }
-
+    /**
+     * This is main funtion
+     *
+     * @param      args  The arguments
+     */
     public static void main(String[] args) {
         // create an object of the list to invoke methods on it
         String objectType = stdin.nextLine();
