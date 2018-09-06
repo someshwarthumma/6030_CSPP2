@@ -6,7 +6,7 @@ import java.util.Scanner;
  * This is student class
  */
 class Student {
-    /**
+    /**.
      * This is a name
      */
     private String name;
@@ -15,9 +15,9 @@ class Student {
      *
      * @param      name  name
      */
-    public Student(String name) {
+    Student(final String name1) {
     //A constructor used to initialize the instance variables
-        this.name = name;
+        this.name = name1;
     }
     /**.
      * This is getName
@@ -30,7 +30,7 @@ class Student {
     }
 
     @Override
-    public boolean equals(Object other) {
+    public boolean equals(final Object other) {
     //This method is to check if two students names are equal or not
         if (!(other instanceof Student)) {
             return false;
@@ -54,6 +54,13 @@ class Student {
  * This is solution class
  */
 public class Solution {
+    /**.
+     * Constructs the Solution.
+     */
+    private Solution(){
+        //THis is contructor
+    }
+
     /**.
      * This is scanner class.
      */
@@ -166,6 +173,7 @@ public class Solution {
                 System.out.println(listInteger.contains(
                     Integer.parseInt((tokens[1]))));
                 break;
+            default:
             }
         }
     }
@@ -222,6 +230,7 @@ public class Solution {
                 System.out.println(listFloat.contains(
                     Float.parseFloat(tokens[1])));
                 break;
+            default:
             }
         }
     }
@@ -278,6 +287,7 @@ public class Solution {
                 System.out.println(listCharacter.contains(
                     tokens[1].charAt(0)));
                 break;
+            default:
             }
         }
     }
@@ -334,6 +344,7 @@ public class Solution {
                 System.out.println(listDouble.contains(
                     Double.parseDouble(tokens[1])));
                 break;
+            default:
             }
         }
     }
@@ -390,6 +401,7 @@ public class Solution {
                 System.out.println(listStudent.contains(
                     new Student(tokens[1])));
                 break;
+            default:
             }
         }
     }
