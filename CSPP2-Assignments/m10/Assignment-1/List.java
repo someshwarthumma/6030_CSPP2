@@ -1,6 +1,8 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-
+/**.
+ * This is a list class
+ */
 public class List {
     //Implement all the methods mentioned to build a ListADT
 
@@ -62,7 +64,9 @@ public class List {
      */
 
 
-
+    /**.
+     * This is constructor
+     */
     public List() {
 
         // what are the two variables to be initialized here?
@@ -93,22 +97,34 @@ public class List {
      * constructor.
      *
      */
-    /**
+    /**.
      * Constructs the object.
      *
-     * @param      capacity  The capacity
+     * @param      capacity  required size of array
      */
     public List(int capacity) {
         size = 0;
         list = new int[capacity];
     }
 
+    /**.
+     * Adds all elements in a array .
+     *
+     * @param      items  array
+     */
     public  void addAll(final int[] items) {
         for (int i = 0; i < items.length; i++) {
             add(items[i]);
         }
     }
 
+    /**.
+     * This countss the given string in the list.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int count(int item) {
         int counter = 0;
         for (int i = 0; i < size; i++) {
@@ -119,6 +135,12 @@ public class List {
         return counter;
     }
 
+    /**.
+     * This add an element at given index.
+     *
+     * @param      index  index
+     * @param      item   item
+     */
     public void add(final int index, final int item) {
         if (index <= size && index >= 0) {
             int[] list3 = new int[size - index];
@@ -150,6 +172,11 @@ public class List {
      * to the list.
      *
      * The method returns void (nothing)
+     */
+    /**.
+     * This add the element at the end
+     *
+     * @param      item   item
      */
     public void add(int item) {
         //Inserts the specified element at the end of the zelist.
@@ -196,6 +223,11 @@ public class List {
      *
      * The method returns an int. Empty list should return 0.
      */
+    /**
+     * This return the size of the array
+     *
+     * @return     { size of the array in integer }
+     */
     public int size() {
         return size;
     }
@@ -221,6 +253,11 @@ public class List {
      * The method returns void (nothing)
      */
 
+    /**.
+     * { remove the given element at the given position. }
+     *
+     * @param      index   index
+     */
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
@@ -247,6 +284,14 @@ public class List {
      * in the list then that would mean the item doesn't exist.
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
+     */
+
+    /**.
+     * This wil return the position of the given array.
+     *
+     * @param      index  The index
+     *
+     * @return     { description_of_the_return_value }
      */
     public int get(int index) {
         if (index < 0 || index >= size) {
@@ -276,6 +321,11 @@ public class List {
      * not all the elements of the array.
      *
      */
+    /**.
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         if (size == 0)
             return "[]";
@@ -294,6 +344,14 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
+
+    /**
+     * This is 
+     *
+     * @param      item  The item
+     *
+     * @return     { boolean }
+     */
     public boolean contains(int item) {
         return indexOf(item) == -1;
     }
@@ -302,6 +360,13 @@ public class List {
      * Returns the index of the first occurrence
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
+     */
+    /**
+     * This returns the index of the given element
+     *
+     * @param      item  The item
+     *
+     * @return     { integer }
      */
     public int indexOf(int item) {
         for (int i = 0; i < size; i++) {
