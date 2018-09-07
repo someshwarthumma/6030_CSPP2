@@ -188,7 +188,6 @@ public class List {
      */
     public int get(final int index) {
         // Replace the code below to write the code for get
-        System.out.println("Index: " + index + "size: " + size);
         if (index < 0 || index >= size) {
             return -1;
         }
