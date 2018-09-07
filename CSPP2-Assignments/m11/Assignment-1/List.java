@@ -238,7 +238,7 @@ public class List {
         List array = new List();
         int j =0;
         if(start < 0 || end >size){
-            System.out.println("Index Out Of Bound Exception");
+            System.out.println("Index Out Of Bounds Exception");
             return null;
         }else{
             for (int i =start;i<end;i++){
