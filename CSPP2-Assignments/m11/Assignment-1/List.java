@@ -89,7 +89,7 @@ public class List {
         /**
          * This is declaration of int array size
          */
-        final int ten=10;
+        final int ten = 10;
         list = new int[ten];
         size = 0;
         // Think about the initial value for size.
@@ -260,7 +260,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         // Replace the code below
 
         for (int i = 0; i < size; i++) {
@@ -446,7 +446,7 @@ public class List {
                 }
                 break;
             case "subList": {
-                if (tokens.length != 2){
+                if (tokens.length != 2) {
                     break;
                 }
                 String[] arrstring3 = tokens[1].split(",");
@@ -461,7 +461,7 @@ public class List {
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
                     List l2 = new List();
-                    for (int k = 0; k < lt.length; k++ ) {
+                    for (int k = 0; k < lt.length; k++) {
                         l2.add(Integer.parseInt(lt[k]));
                     }
                     System.out.println(l.equals(l2));
