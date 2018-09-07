@@ -181,10 +181,11 @@ public class List {
      */
     public boolean contains(int item) {
         // Replace the code below
+        
         if(indexOf(item)== -1){
             return false;
         }
-        return true;
+        return true; 
     }
     /*
      * Returns the index of the first occurrence of the specified element in
@@ -192,8 +193,11 @@ public class List {
      */
     public int indexOf(int item) {
         // Replace the code below
+        
         for(int i=0;i<size;i++){
+            
             if(list[i]==item){
+                
                 return i;
             }
         }
@@ -212,11 +216,11 @@ public class List {
      Removes all of its elements that are contained in the specified int 
      array.    
     */
-     public void removeAll(int[] newArray)
+    public void removeAll(int[] newArray)
      {
         // write the logic 
         for(int j : newArray){
-            if(indexOf(j)!= -1){
+            while(indexOf(j)!= -1){
                 remove(indexOf(j));
             }
         }
@@ -235,12 +239,14 @@ public class List {
         int j =0;
         if(start < 0 || end >size){
             System.out.println("Index Out Of Bound Exception");
+            return null;
         }else{
             for (int i =start;i<end;i++){
                 array.add(list[i]);
             }
+            return array;
         }
-        return array;
+        
     }
 
     /*
@@ -250,27 +256,14 @@ public class List {
     public boolean equals(List newList ) 
     {
     // Replace the code below
-        int j=0;
-        if (newList.size != size){
-            return false;
-        }
-        int count =0;
-        for(int i:list){
-                if(newList.contains(i)){
-                    count += 1;
-                }
-                j++;
-            }
-        if(count==size){
-            return true;
-        }
-        return false;
+       return toString().equals(newList.toString());
     }
     /*
     * Removes all the elements from list
     * Think about this case and make the method
     * the simpler.
     */
+
     public void clear()
     {
     // write the logic for clear.
