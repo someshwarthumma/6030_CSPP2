@@ -35,22 +35,22 @@ public class List<E> {
         //Inserts the specified element at the end of the list.
         //You can modify the code in this method.
         /*if(size == list.length){
-        	resize();*/
+            resize();*/
         list[size++] = item;
     }
     /*Inserts all the elements of specified int
     array to the end of list*/
     public void addAll(E[] items) {
         //Write logic for addAll method
-        for(int i=0; i<items.length;i++){
-        	add(items[i]);
+        for (int i = 0; i < items.length; i++) {
+            add(items[i]);
         }
     }
     /**
      * { function_description }
      */
-    private void resize(){
-    	list = Arrays.copyOf(list, 2*list.length);
+    private void resize() {
+        list = Arrays.copyOf(list, 2 * list.length);
     }
 
     /*
@@ -61,7 +61,7 @@ public class List<E> {
      * The method returns an int. Empty list should return 0.
      */
     public int size() {
-    	return size;
+        return size;
     }
     /*
      * The remove method does what the name suggests.
@@ -85,15 +85,15 @@ public class List<E> {
      */
     public void remove(int index) {
         //Write logic for remove method
-        if(index<0 || index >=size){
-        	System.out.println("Invalid Position Exception");
-        }else{
-        	for(int i=index;i<size-1;i++){
-        	list[i]=list[i+1];
+        if (index < 0 || index >= size) {
+            System.out.println("Invalid Position Exception");
+        } else {
+            for (int i = index; i < size - 1; i++) {
+                list[i] = list[i + 1];
+            }
+            size--;
         }
-        size--;
-        }
-        
+
     }
     /*
      * Get method has to return the items that is
@@ -107,7 +107,7 @@ public class List<E> {
      * number of items in the list? Would size variable be useful?
      */
     public E get(int index) {
-         //Write logic for get method
+        //Write logic for get method
         // return list[index];
         if (index < 0 || index >= size) {
             return null;
@@ -136,7 +136,7 @@ public class List<E> {
      */
     public String toString() {
 
-       if (size == 0) {
+        if (size == 0) {
             return "[]";
         } else {
             String str = "[";
@@ -153,8 +153,8 @@ public class List<E> {
      * the item exists and otherwise false
      */
     public boolean contains(E item) {
-		//Write logic for contains method
-         if (indexOf(item) == -1) {
+        //Write logic for contains method
+        if (indexOf(item) == -1) {
             return false;
         }
         return true;
@@ -167,10 +167,10 @@ public class List<E> {
      */
 
     public int indexOf(E item) {
-       //Write logic for indexOf method
+        //Write logic for indexOf method
         for (int i = 0; i < size; i++) {
 
-            if (list[i] == item) {
+            if (list[i].equals(item)) {
 
                 return i;
             }
@@ -181,8 +181,7 @@ public class List<E> {
     /* Removes all of its elements that
      * are contained in the specified int array.
      */
-    public void removeAll(E[] newArray)
-    {
+    public void removeAll(E[] newArray) {
         // write the logic
         for (E j : newArray) {
             while (indexOf(j) != -1) {
@@ -217,13 +216,11 @@ public class List<E> {
     /*Returns a boolean indicating whether the parameter
       i.e a List object is exactly matching with the given list or not.
      */
-    public boolean equals(List<E> newList)
-    {
+    public boolean equals(List<E> newList) {
         return toString().equals(newList.toString());
     }
     /*Removes all the elements from list*/
-    public void clear()
-    {
-        size=0;
+    public void clear() {
+        size = 0;
     }
 }
