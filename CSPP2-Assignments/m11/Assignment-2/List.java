@@ -36,8 +36,8 @@ public class List<E> {
         //You can modify the code in this method.
         /*if(size == list.length){
         	resize();*/
-        list[size] = item;
-        size++;
+        System.out.println(size);
+        list[size++] = item;
     }
     /*Inserts all the elements of specified int
     array to the end of list*/
@@ -86,7 +86,7 @@ public class List<E> {
      */
     public void remove(int index) {
         //Write logic for remove method
-        if(index<=0 || index >=size){
+        if(index<0 || index >=size){
         	System.out.println("Invalid Position Exception");
         }
         for(int i=index;i<size-1;i++){
