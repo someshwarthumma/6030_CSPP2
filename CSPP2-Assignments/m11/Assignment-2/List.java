@@ -36,7 +36,6 @@ public class List<E> {
         //You can modify the code in this method.
         /*if(size == list.length){
         	resize();*/
-        System.out.println(size);
         list[size++] = item;
     }
     /*Inserts all the elements of specified int
@@ -88,11 +87,13 @@ public class List<E> {
         //Write logic for remove method
         if(index<0 || index >=size){
         	System.out.println("Invalid Position Exception");
-        }
-        for(int i=index;i<size-1;i++){
+        }else{
+        	for(int i=index;i<size-1;i++){
         	list[i]=list[i+1];
         }
         size--;
+        }
+        
     }
     /*
      * Get method has to return the items that is
