@@ -34,10 +34,11 @@ public class List<E> {
     public void add(E item) {
         //Inserts the specified element at the end of the list.
         //You can modify the code in this method.
-        if(size == list.length){
-        	resize();
-        }
-        list[(size++)] = item;
+        /*if(size == list.length){
+        	resize();*/
+        System.out.println(size);
+        list[size] = item;
+        size++;
     }
     /*Inserts all the elements of specified int
     array to the end of list*/
