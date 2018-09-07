@@ -6,15 +6,18 @@ import java.util.Scanner;
  * This is student class
  */
 class Student {
-    private String name;
     /**
+     * This is name.
+     */
+    private String name;
+    /**.
      * This is student
      *
      * @param      name  The name
      */
-    public Student(final String name) {
+    Student(final String name1) {
     //A constructor used to initialize the instance variables
-        this.name = name;
+        this.name = name1;
     }
     /**.
      * This is getName
@@ -49,7 +52,9 @@ class Student {
         return 0;
     }
 }
-
+/**
+ * This is solution class.
+ */
 public final class Solution {
     /**.
      * Constructs the Solution.
@@ -123,8 +128,9 @@ public final class Solution {
                 if (tokens.length == 2) {
                     String[] t2 = tokens[1].split(",");
                     Integer[] a = new Integer[t2.length];
-                    for (int i = 0; i < t2.length; i++)
+                    for (int i = 0; i < t2.length; i++) {
                         a[i] = Integer.parseInt(t2[i]);
+                    }
                     l.removeAll(a);
                 }
                 break;
@@ -144,7 +150,7 @@ public final class Solution {
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
                     List l2 = new List();
-                    for (int k = 0; k < lt.length; k++ ) {
+                    for (int k = 0; k < lt.length; k++) {
                         l2.add(Integer.parseInt(lt[k]));
                     }
                     System.out.println(l.equals(l2));
@@ -223,8 +229,9 @@ public final class Solution {
                 if (tokens.length == 2) {
                     String[] t2 = tokens[1].split(",");
                     Double[] a = new Double[t2.length];
-                    for (int i = 0; i < t2.length; i++)
+                    for (int i = 0; i < t2.length; i++) {
                         a[i] = Double.parseDouble(t2[i]);
+                    }
                     l.removeAll(a);
                 }
                 break;
@@ -244,7 +251,7 @@ public final class Solution {
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
                     List l2 = new List();
-                    for (int k = 0; k < lt.length; k++ ) {
+                    for (int k = 0; k < lt.length; k++) {
                         l2.add(Double.parseDouble(lt[k]));
                     }
                     System.out.println(l.equals(l2));
@@ -324,8 +331,9 @@ public final class Solution {
                 if (tokens.length == 2) {
                     String[] t2 = tokens[1].split(",");
                     Float[] a = new Float[t2.length];
-                    for (int i = 0; i < t2.length; i++)
+                    for (int i = 0; i < t2.length; i++) {
                         a[i] = Float.parseFloat(t2[i]);
+                    }
                     l.removeAll(a);
                 }
                 break;
@@ -345,7 +353,7 @@ public final class Solution {
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
                     List l2 = new List();
-                    for (int k = 0; k < lt.length; k++ ) {
+                    for (int k = 0; k < lt.length; k++) {
                         l2.add(Float.parseFloat(lt[k]));
                     }
                     System.out.println(l.equals(l2));
@@ -440,7 +448,7 @@ public final class Solution {
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
                     List l2 = new List();
-                    for (int k = 0; k < lt.length; k++ ) {
+                    for (int k = 0; k < lt.length; k++) {
                         l2.add((lt[k]));
                     }
                     System.out.println(l.equals(l2));
