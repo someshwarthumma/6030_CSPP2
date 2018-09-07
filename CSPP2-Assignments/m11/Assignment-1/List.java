@@ -233,7 +233,7 @@ public class List {
     // write the logic for subList
         List array = new List();
         int j =0;
-        if(start < 0 || end >=size){
+        if(start < 0 || end >size){
             System.out.println("Index Out Of Bound Exception");
         }else{
             for (int i =start;i<end;i++){
