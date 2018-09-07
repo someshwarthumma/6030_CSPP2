@@ -36,7 +36,6 @@ public class List<E> {
         //You can modify the code in this method.
         /*if(size == list.length){
         	resize();*/
-        System.out.println(size);
         list[size] = item;
         size++;
     }
