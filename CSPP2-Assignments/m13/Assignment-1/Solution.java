@@ -149,7 +149,7 @@ class Set {
         int length = this.size * array.size;
         int[][] cartesian = new int[length][2];
         int i = 0;
-        if(i<length) {
+        if(i < length) {
             for (int j = 0; j < size; j++) {
                 for (int k = 0; k < array.size(); k++) {
                     cartesian[i][0] = this.get(j);
@@ -251,10 +251,12 @@ public final class Solution {
                 s.addAll(intArray);
                 intArray = intArray(tokens[2]);
                 t.addAll(intArray);
-                if(Arrays.deepToString(s.cartesianProduct(t))=="[]"){
+                if(Arrays.deepToString(s.cartesianProduct(t)) == "[]") {
                     System.out.println("null");
-                }else{
-                    System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
+                } else {
+                    System.out.println("this is somi");
+                    System.out.println(Arrays.
+                        deepToString(s.cartesianProduct(t)));
                 }
                 break;
             default:
