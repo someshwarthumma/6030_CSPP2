@@ -73,7 +73,8 @@ class Set {
         if (size == list.length) {
             resize();
         }
-        if (contains(item) == false) {
+        if (contains(item)) {
+        } else {
             list[size++] = item;
         }
     }
