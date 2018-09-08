@@ -9,7 +9,7 @@ import java.util.Arrays;
 class Set {
     //your code goes here...
     //Good luck :-)
-    
+
     /**.
      * { This is list of inttype }
      */
@@ -21,8 +21,9 @@ class Set {
     /**.
      * This is constructor
      */
-    public Set() {
-        list = new int[10];
+    Set() {
+        final int ten = 10;
+        list = new int[ten];
         size = 0;
     }
     /**.
