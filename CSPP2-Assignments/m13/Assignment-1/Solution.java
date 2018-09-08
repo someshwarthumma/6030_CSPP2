@@ -162,8 +162,9 @@ class Set {
 
             }
         }
-        if(cartesian.length==0)
+        if (cartesian.length == 0) {
             return null;
+        }
         return cartesian;
 
     }
