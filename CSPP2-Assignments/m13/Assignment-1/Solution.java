@@ -162,8 +162,6 @@ class Set {
 
             }
         }
-        if(cartesian[0][0]==0)
-            return null;
         return cartesian;
 
     }
