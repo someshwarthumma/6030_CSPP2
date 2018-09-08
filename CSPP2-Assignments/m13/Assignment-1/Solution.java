@@ -74,6 +74,7 @@ class Set {
             resize();
         }
         if (contains(item)) {
+            //This is if condition
         } else {
             list[size++] = item;
         }
