@@ -13,11 +13,11 @@ class Set {
     /**.
      * { This is list of inttype }
      */
-    public int[] list;
+    private int[] list;
     /**.
      * This is size
      */
-    public int size;
+    private int size;
     /**.
      * This is constructor
      */
