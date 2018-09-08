@@ -92,7 +92,7 @@ class Set {
     	int[][] cartesian = new int[length][2];
     	for(int i=0;i<length;i++){
     		for(int j =0;j<size;j++){
-    			for(int k=0;k<array.size-1;k++){
+    			for(int k=0;k<array.size();k++){
     				cartesian[i][j]= this.get(j);
     				cartesian[i][k]=array.get(k);
     			}
