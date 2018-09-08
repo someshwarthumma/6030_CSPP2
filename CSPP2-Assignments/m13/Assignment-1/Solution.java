@@ -75,7 +75,7 @@ class Set {
         }
         if (contains(item)) {
             //This is if condition
-            size=size;
+            size = size;
         } else {
             list[size++] = item;
         }
