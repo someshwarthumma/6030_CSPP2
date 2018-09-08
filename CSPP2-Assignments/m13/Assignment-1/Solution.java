@@ -84,19 +84,20 @@ class Set {
     			retain.add(list[i]);
     		}
     	}
-
     	return retain;
     }
 
     public int[][] cartesianProduct(Set array){
-    	int[][] cartesian = new int[this.size*array.size][2];
-    	int k = 0;
-    	for(int i=0;i<this.size;i++){
-    		for(int j =0;j<array.size;j++){
-    			cartesian[k][0]= this.get(i);
-    			cartesian[k][1]=array.get(j);
+    	int length = this.size*array.size;
+    	int[][] cartesian = new int[length][2];
+    	for(int i=0;i<length;i++){
+    		for(int j =0;j<size;j++){
+    			for(int k=0;k<array.size;k++){
+    				cartesian[i][j]= this.get(i);
+    				cartesian[i][k]=array.get(j);
+    			}
+    			
     		}
-    		k++;
     	}
 
     	return cartesian;
