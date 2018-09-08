@@ -147,7 +147,7 @@ class Set {
     public int[][] cartesianProduct(final Set array) {
         int length = this.size * array.size;
         int[][] cartesian = new int[length][2];
-        int i= 0;
+        int i = 0;
         if(i<length) {
             for (int j = 0; j < size; j++) {
                 for (int k = 0; k < array.size(); k++) {
@@ -157,10 +157,6 @@ class Set {
                 }
 
             }
-        }
-        if (cartesian==null){
-            System.out.println("This is mod");
-            return null;
         }
         return cartesian;
 
@@ -254,7 +250,11 @@ public final class Solution {
                 s.addAll(intArray);
                 intArray = intArray(tokens[2]);
                 t.addAll(intArray);
-                System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
+                if(Arrays.deepToString(s.cartesianProduct(t))=="[]"){
+                    System.out.println("null");
+                }else{
+                    System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
+                }
                 break;
             default:
                 break;
