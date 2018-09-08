@@ -101,9 +101,9 @@ class Set {
 
             }
         }
-        /*if (cartesian==null){
-            cartesian = [];
-        }*/
+        if (cartesian==null){
+            return null;
+        }
         return cartesian;
 
     }
