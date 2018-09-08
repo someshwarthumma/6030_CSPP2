@@ -45,7 +45,9 @@ class Set {
     	if(size==list.length){
     		resize();
     	}
-    	list[size++]=item;
+    	if(contains(item)==false){
+    		list[size++]=item;
+    	}
     }
 
     private void resize(){
