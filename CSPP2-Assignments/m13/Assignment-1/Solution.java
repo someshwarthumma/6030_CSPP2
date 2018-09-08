@@ -66,9 +66,9 @@ class Set {
 
     public Set intersection(Set givenSet){
     	Set intersect = new Set();
-    	for(int i=0;i<givenSet.size;i++){
-    		if(this.contains(givenSet.get(i))){
-    			intersect.add(givenSet.get(i));
+    	for(int i=0;i<this.size;i++){
+    		if(givenSet.contains(this.get(i))){
+    			intersect.add(this.get(i));
     		}
     	}
     	return intersect;
