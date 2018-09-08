@@ -77,8 +77,10 @@ class Set {
 
     public Set retainAll(int[] array){
     	Set retain = new Set();
+    	Set newArray = new Set();
+    	newArray.addAll(array);
     	for(int i=0; i<size;i++){
-    		if(array[i]==list[i]){
+    		if(newArray.contains(get(i))){
     			retain.add(list[i]);
     		}
     	}
