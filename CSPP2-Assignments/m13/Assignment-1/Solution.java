@@ -97,7 +97,7 @@ class Set {
     				System.out.println("This is j: "+j);
     				System.out.println("This is k: "+k);
     				cartesian[i][j]= this.get(j);
-    				cartesian[i][k]=array.get(k);
+    				cartesian[i][k]=array.get(0);
     			}
     			
     		}
