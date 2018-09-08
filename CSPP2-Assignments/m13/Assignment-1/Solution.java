@@ -93,8 +93,9 @@ class Set {
     	for(int i=0;i<length;i++){
     		for(int j =0;j<size;j++){
     			for(int k=0;k<array.size();k++){
+    				System.out.println("This is i: "+i);
     				System.out.println("This is j: "+j);
-    				System.out.println("This is k: "+i);
+    				System.out.println("This is k: "+k);
     				cartesian[i][j]= this.get(j);
     				cartesian[i][k]=array.get(k);
     			}
