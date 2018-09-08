@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * Class for set.
- * @author : 
+ * @author :
  */
 class Set {
     //your code goes here...
@@ -12,101 +12,100 @@ class Set {
     public int[] list;
     public int size;
 
-    public Set(){
-    	list = new int[10];
-    	size = 0;
+    public Set() {
+        list = new int[10];
+        size = 0;
     }
 
-    public int size(){
-    	return size;
+    public int size() {
+        return size;
     }
 
-    public boolean contains(int item){
-    	for(int i=0;i<size;i++){
-    		if(list[i]==item){
-    			return true;
-    		}
-    	}
-    	return false;
+    public boolean contains(int item) {
+        for (int i = 0; i < size; i++) {
+            if (list[i] == item) {
+                return true;
+            }
+        }
+        return false;
     }
 
-    public String toString(){
-    	if(size==0){
-    		return "{}";
-    	}
-    	String str = "{";
-    	for(int i=0;i<size-1;i++){
-    		str = str + list[i]+", ";
-    	}
-    	return str+list[size-1]+"}";
+    public String toString() {
+        if (size == 0) {
+            return "{}";
+        }
+        String str = "{";
+        for (int i = 0; i < size - 1; i++) {
+            str = str + list[i] + ", ";
+        }
+        return str + list[size - 1] + "}";
     }
 
-    public void add(int item){
-    	if(size==list.length){
-    		resize();
-    	}
-    	if(contains(item)==false){
-    		list[size++]=item;
-    	}
+    public void add(int item) {
+        if (size == list.length) {
+            resize();
+        }
+        if (contains(item) == false) {
+            list[size++] = item;
+        }
     }
 
-    private void resize(){
-    	list = Arrays.copyOf(list,2*list.length);
+    private void resize() {
+        list = Arrays.copyOf(list, 2 * list.length);
     }
 
-    public void addAll(int[] array){
-    	for(int i=0;i<array.length;i++){
-    		add(array[i]);
-    	}
+    public void addAll(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            add(array[i]);
+        }
     }
 
-    public int get(int index){
-    	return list[index];
+    public int get(int index) {
+        return list[index];
     }
 
-    public Set intersection(Set givenSet){
-    	Set intersect = new Set();
-    	for(int i=0;i<this.size;i++){
-    		if(givenSet.contains(this.get(i))){
-    			intersect.add(this.get(i));
-    		}
-    	}
-    	return intersect;
+    public Set intersection(Set givenSet) {
+        Set intersect = new Set();
+        for (int i = 0; i < this.size; i++) {
+            if (givenSet.contains(this.get(i))) {
+                intersect.add(this.get(i));
+            }
+        }
+        return intersect;
 
     }
 
-    public Set retainAll(int[] array){
-    	Set retain = new Set();
-    	Set newArray = new Set();
-    	newArray.addAll(array);
-    	for(int i=0; i<size;i++){
-    		if(newArray.contains(get(i))){
-    			retain.add(list[i]);
-    		}
-    	}
-    	return retain;
+    public Set retainAll(int[] array) {
+        Set retain = new Set();
+        Set newArray = new Set();
+        newArray.addAll(array);
+        for (int i = 0; i < size; i++) {
+            if (newArray.contains(get(i))) {
+                retain.add(list[i]);
+            }
+        }
+        return retain;
     }
 
-    public int[][] cartesianProduct(Set array){
-    	int length = this.size*array.size;
-    	int[][] cartesian = new int[length][2];
-    	for(int i=0;i<length;i++){
-    		for(int j =0;j<size;j++){
-    			for(int k=0;k<array.size();k++){
-    				System.out.println("This is i: "+i);
-    				System.out.println("This is j: "+j);
-    				System.out.println("This is k: "+k);
-    				cartesian[i][0]= this.get(j);
-    				cartesian[i][1]=array.get(k);
-    			}
-    			
-    		}
-    	}
+    public int[][] cartesianProduct(Set array) {
+        int length = this.size * array.size;
+        int[][] cartesian = new int[length][2];
+        int i= 0;
+        if(i<length) {
+            for (int j = 0; j < size; j++) {
+                for (int k = 0; k < array.size(); k++) {
+                    cartesian[i][0] = this.get(j);
+                    cartesian[i][1] = array.get(k);
+                    i++;
+                }
 
-    	return cartesian;
+            }
+        }
+
+        return cartesian;
 
     }
-    
+
 }
 /**
  * Solution class for code-eval.
@@ -134,8 +133,8 @@ public final class Solution {
             input = s.substring(1, s.length() - 1);
         }
         return Arrays.stream(input.split(","))
-                            .mapToInt(Integer::parseInt)
-                            .toArray();
+               .mapToInt(Integer::parseInt)
+               .toArray();
     }
     /**
      * main function to execute test cases.
@@ -155,16 +154,16 @@ public final class Solution {
             String[] tokens = line.split(" ");
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
-                case "size":
+            case "size":
                 System.out.println(s.size());
                 break;
-                case "contains":
+            case "contains":
                 System.out.println(s.contains(Integer.parseInt(tokens[1])));
                 break;
-                case "print":
+            case "print":
                 System.out.println(s);
                 break;
-                case "add":
+            case "add":
                 int[] intArray = intArray(tokens[1]);
                 if (intArray.length == 1) {
                     s.add(intArray[0]);
@@ -172,7 +171,7 @@ public final class Solution {
                     s.addAll(intArray);
                 }
                 break;
-                case "intersection":
+            case "intersection":
                 s = new Set();
                 Set t = new Set();
                 intArray = intArray(tokens[1]);
@@ -181,14 +180,14 @@ public final class Solution {
                 t.addAll(intArray);
                 System.out.println(s.intersection(t));
                 break;
-                case "retainAll":
+            case "retainAll":
                 s = new Set();
                 intArray = intArray(tokens[1]);
                 s.addAll(intArray);
                 intArray = intArray(tokens[2]);
                 System.out.println(s.retainAll(intArray));
                 break;
-                case "cartesianProduct":
+            case "cartesianProduct":
                 s = new Set();
                 t = new Set();
                 intArray = intArray(tokens[1]);
@@ -197,7 +196,7 @@ public final class Solution {
                 t.addAll(intArray);
                 System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
                 break;
-                default:
+            default:
                 break;
             }
         }
