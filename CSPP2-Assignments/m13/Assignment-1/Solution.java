@@ -102,6 +102,7 @@ class Set {
             }
         }
         if (cartesian==null){
+            System.out.println("This is mod");
             return null;
         }
         return cartesian;
