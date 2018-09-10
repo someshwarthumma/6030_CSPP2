@@ -113,9 +113,6 @@ class Set {
      * @return     { description_of_the_return_value }
      */
 
-
-
-
 }
 
 class SortedSet extends Set {
@@ -146,7 +143,7 @@ class SortedSet extends Set {
         int i;
         System.out.println("last index: " + (size - 1));
         for (i = size - 1; i >= 0; i--) {
-            if (get(i) > item) {
+            if (item > get(i)) {
                 break;
             }
         }
