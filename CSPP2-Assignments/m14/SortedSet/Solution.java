@@ -121,34 +121,42 @@ class Set {
 class SortedSet extends Set {
 
 	public void add(int item) {
-		if(size==list.length){
+		/*if(size==list.length){
 			super.resize();
-		}
+		}*/
+
+		System.out.println("This is add(item): "+item);
 		if (size == 0) {
+			System.out.println("If in add: first element: "+ item);
 			list[size++] = item;
 		} else {
 			if (contains(item)) {
+				System.out.println("item already present");
 				//This is if condition
 				size = size;
 			} else {
-
+				System.out.println("go for index of item:");
 				add(getIndexToAdd(item), item);
 			}
 		}
 	}
 
 	private int getIndexToAdd(int item) {
-
+		System.out.println("This is getIndexToAdd: "+item);
 		int i;
+		System.out.println("last index: "+(size-1));
 		for (i = size-1; i>=0; i--) {
 			if (get(i) > item) {
 				break;
 			}
 		}
+		System.out.println("index: "+i);
 		return i;
 	}
 
 	private void add(int index, int item){
+		System.out.println("This is add method with two param: ");
+		System.out.println("index: "+index+"item: "+item);
 		if (index <= size && index >= 0) {
             int[] list3 = new int[size - index];
             int j = 0;
@@ -164,10 +172,13 @@ class SortedSet extends Set {
                 j++;
             }
         }
+        System.out.println("element added: ");
 	}
 
 	public void addAll(int[] array){
+		System.out.println("This is addAll: ");
 		for(int i:array){
+			System.out.println("i in addAll: "+i);
 			add(i);
 		}
 	}
