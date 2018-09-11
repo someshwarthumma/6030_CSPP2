@@ -1,14 +1,24 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
-
+/**
+ * This is sorted set
+ */
 class SortedSet{
 	int[] list;
 	int size;
+	/**
+	 * This is sorted set constructed
+	 */
 	SortedSet(){
 		list = new int[10];
 		size = 0;
 	}
+	/**
+	 * This is sorted set constructed with parameter
+	 *
+	 * @param      capacity  capacity
+	 */
 	public SortedSet(int capacity){
 		list = new int[capacity];
 		size = 0;
@@ -47,7 +57,11 @@ class SortedSet{
     private void resize() {
         list = Arrays.copyOf(list, 2 * size);
     }
-
+    /**
+     * This is add method to add the elemets in sorted order
+     *
+     * @param      item  The item
+     */
     public void add(final int item) {
         int flag = 0;
         if (size == list.length) {
@@ -112,13 +126,27 @@ class SortedSet{
         return -1;
     }
 
+    /**
+     * This is get method
+     *
+     * @param      index  The index
+     *
+     * @return     { description_of_the_return_value }
+     */
 	public int get(int index){
 		if(index>=0 && index<size){
 			return list[index];
 		}
 		return -1;
 	}
-
+	/**
+	 * This is subset method
+	 *
+	 * @param      start  The start
+	 * @param      end    The end
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public int[] subSet(final int start, final int end) {
         if (size == 0) {
             int[] subSet = new int[0];
