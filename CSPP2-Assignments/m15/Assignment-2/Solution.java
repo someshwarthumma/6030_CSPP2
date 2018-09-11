@@ -140,6 +140,9 @@ class SortedSet{
         for (int i = 0; i < a; i++) {
             temp[i] = list[i];
         }
+        if(temp.length==0){
+        	System.out.println("Set Empty Exception");
+        }
         return temp;
     }
     public int last() {
