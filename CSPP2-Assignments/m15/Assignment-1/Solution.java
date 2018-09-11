@@ -471,9 +471,11 @@ public class Solution{
 	                break;
 
 	             case "count":
-	             	if(tokens.length==2){
-	             		s.count(Integer.parseInt(tokens[1]));
-	             	}
+	             	//System.out.println("This is count:");
+	             	//if(tokens.length==2){
+	             	System.out.println(s.count(Integer.parseInt(tokens[1])));
+	             	
+	             	//}
 	             	break;
             	default:
                 	break;
