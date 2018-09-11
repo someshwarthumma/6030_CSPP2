@@ -320,8 +320,9 @@ public final class Solution {
 						parseInt(temp[1])) {
 	throw new Exception("Invalid Arguments to Subset Exception");
 					}
-					int[] temp1 = s.subSet(Integer.parseInt(temp[0]),
-					                       Integer.parseInt(temp[1]));
+					int[] temp1 = s.subSet(Integer.
+						parseInt(temp[0]),
+						Integer.parseInt(temp[1]));
 					String str = "{";
 					int i;
 					if (temp1.length == 0) {
