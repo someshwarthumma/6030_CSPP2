@@ -150,13 +150,11 @@ class SortedSet{
     public int sizee() {
     	return size;
     }
-    public int last() {
-        try {
-            return list[size - 1];
-        } catch (IndexOutOfBoundsException e) {
-            System.out.println("Set Empty Exception");
+    public int last() throws Exception{
+        if (size == 0) {
+           throw  new Exception("Set Empty Exception");
         }
-        return -1;
+        return list[size - 1];
     }
 
     public SortedSet intersection(final SortedSet givenSet) {
