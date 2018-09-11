@@ -379,7 +379,7 @@ public class Solution{
 		List s = new List();
 		int num = scan.nextInt();
 		scan.nextLine();
-		for(int i =0;i<num;i++){
+		while (scan.hasNext()) {
 			String line = scan.nextLine();
 			String[] tokens = line.split(" ");
 			switch(tokens[0]){
