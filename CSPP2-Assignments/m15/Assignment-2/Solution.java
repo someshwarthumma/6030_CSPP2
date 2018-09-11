@@ -151,10 +151,14 @@ class SortedSet{
     	return size;
     }
     public int last() {
-        if (size == 0) {
-            System.out.println("Set Empty Exception");
-            return -1;
-        }
+    	try{ 
+	        if (size == 0) {
+	           throw  new Exception("Set Empty Exception");
+	       
+	        }
+    	} catch (Exception e) {
+    		System.out.println(e.getMessage());
+    	}
         return list[size - 1];
     }
 
