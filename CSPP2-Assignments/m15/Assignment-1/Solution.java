@@ -392,6 +392,29 @@ class List {
         }
         return counter;
     }
+    /**.
+     * { Adding an element at a given position. }
+     *
+     * @param      index  index
+     * @param      item   item
+     */
+    public void add(int index, int item) {
+        if (index <= size && index >= 0) {
+            int[] list3 = new int[size - index];
+            int j = 0;
+            for (int i = index; i < size; i++) {
+                list3[j] = list[i];
+                j++;
+            }
+            j = 0;
+            list[index] = item;
+            size++;
+            for (int i = index + 1; i < size; i++) {
+                list[i] = list3[j];
+                j++;
+            }
+        }
+    }
 }
 
 
@@ -427,8 +450,14 @@ public final class Solution {
                     System.out.println(s.size());
                     break;
                 case "add":
+                    try{
+                    s.add(Integer.parseInt(tokens[1]),Integer.parseInt(tokens[2]));
+                    break;
+                    } catch (Exception e) {
                     s.add(Integer.parseInt(tokens[1]));
                     break;
+                    }
+                    
                 case "print":
                     System.out.println(s);
                     break;
