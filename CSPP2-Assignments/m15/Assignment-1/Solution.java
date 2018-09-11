@@ -157,6 +157,8 @@ class List {
      * This is to remove the element at the given index
      *
      * @param      index  Integer
+     * 
+     * @param      Exception return exception message.
      */
     public void remove(final int index) throws Exception{
         // write the logic for remove here. Think about what to do to the size
@@ -293,10 +295,12 @@ class List {
      Removes all of its elements that are contained in the specified int
      array.
     */
-    /**.
-     * remeoves all the elements given
+    /**
+     * Removes all. given elements from the given list.
      *
-     * @param      newArray  The new array
+     * @param      newArray   The new array
+     *
+     * @throws     Exception  { exception message }
      */
     public void removeAll(final int[] newArray) throws Exception{
         // write the logic
@@ -316,15 +320,17 @@ class List {
     and also if start is greater than end.
     */
 
-    /**.
-     * This is subList method
+    /**
+     * This is sublist to find the siblist for the given indexes
      *
-     * @param      start  The start
-     * @param      end    The end
+     * @param      start      start Index
+     * @param      end        end Index
      *
-     * @return     { list object }
+     * @return     { List object }
+     *
+     * @throws     Exception  { exception message }
      */
-    public List subList(final int start, final int end) throws Exception{
+    public List subList(final int start, final int end) throws Exception {
         // write the logic for subList
         List array = new List();
         int j = 0;
@@ -370,8 +376,14 @@ class List {
         // write the logic for clear.
         size = 0;
     }
-
-    public int count(int item) {
+    /**
+     * This is method to find the count of the given number in a given list
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int count(final int item) {
         int counter = 0;
         for (int i = 0; i < size; i++) {
             if (list[i] == item) {
@@ -383,16 +395,31 @@ class List {
 }
 
 
-
+/**.
+ * This solution class.
+ */
 public class Solution {
-    static Scanner scan = new Scanner(System.in);
-    public static void main(String[] args) {
+    /**.
+     * This is solution constructor
+     */
+    private Solution(){
+        //This is solution constructor.
+    }
+    /**.
+     * This is scanner class initialisation.
+     */
+    private static Scanner scan = new Scanner(System.in);
+    /**.
+     * This is main funtion.
+     *
+     * @param      args  command line arguments
+     */
+    public static void main(final String[] args) {
         List s = new List();
         int num = scan.nextInt();
         scan.nextLine();
         while (scan.hasNext()) {
-            try{
-
+            try {
                 String line = scan.nextLine();
                 String[] tokens = line.split(" ");
                 switch (tokens[0]) {
@@ -476,14 +503,15 @@ public class Solution {
                 case "count":
                     //System.out.println("This is count:");
                     if (tokens.length == 2) {
-                        System.out.println(s.count(Integer.parseInt(tokens[1])));
+                        System.out.println(s.count(Integer.
+                            parseInt(tokens[1])));
 
                     }
                     break;
                 default:
                     break;
                 }
-            } catch(Exception e){
+            } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
 
