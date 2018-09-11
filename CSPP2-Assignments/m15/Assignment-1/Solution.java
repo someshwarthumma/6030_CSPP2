@@ -322,17 +322,15 @@ class List {
      *
      * @return     { list object }
      */
-    public List subList(final int start, final int end) {
+    public List subList(final int start, final int end) throws Exception{
         // write the logic for subList
         List array = new List();
         int j = 0;
         if (size == 0 && end == 0 && size == 0) {
-            System.out.println("Index Out of Bounds Exception");
-            return null;
+            throw new Exception("Index Out of Bounds Exception");
         }
         if (start < 0 || end > size) {
-            System.out.println("Index Out of Bounds Exception");
-            return null;
+            throw new Exception("Index Out of Bounds Exception");
         } else {
             for (int i = start; i < end; i++) {
                 array.add(list[i]);
