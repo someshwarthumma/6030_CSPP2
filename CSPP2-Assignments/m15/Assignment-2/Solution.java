@@ -134,12 +134,12 @@ class SortedSet{
         return subSet;
     }
 
-    public int[] headSet(final int end) {
+    public int[] headSet(final int end) throws Exception{
         int a = end(end);
         if (a == -1) {
-        	System.out.println("Set Empty Exception");
-            int[] temp = new int[0];
-            return temp;
+        	throw new Exception("Set Empty Exception");
+            /*int[] temp = new int[0];
+            return temp;*/
         }
         int[] temp = new int[a];
         for (int i = 0; i < a; i++) {
@@ -253,78 +253,82 @@ public final class Solution {
         
         // check if there is one more line to process
         while (stdin.hasNext()) {
-            // read the line
-            String line = stdin.nextLine();
-            // split the line using space
-            String[] tokens = line.split(" ");
-            switch (tokens[0]) {
-            case "print":
-                System.out.println(s);
-                break;
-            case "addAll":
-                String[] strArray = tokens[1].split(",");
-                int[] intArray1 = new int[strArray.length];
-                for (int i = 0; i < strArray.length; i++) {
-                    intArray1[i] = Integer.parseInt(strArray[i]);
-                }
-                s.addAll(intArray1);
-                break;
-            case "subSet":
-                String[] temp = tokens[1].split(",");
-                if (Integer.parseInt(temp[0]) > Integer.parseInt(temp[1])) {
-                    System.out.println("Invalid Arguments to Subset Exception");
-                    break;
-                }
-                int[] temp1 = s.subSet(Integer.parseInt(temp[0]),
-                                       Integer.parseInt(temp[1]));
-                String str = "{";
-                int i;
-                if (temp1.length == 0) {
-                    System.out.println("{}");
-                    break;
-                }
-                for (i = 0; i < temp1.length - 1; i++) {
-                    str += temp1[i] + ", ";
-                }
-                str += temp1[temp1.length - 1] + "}";
-                System.out.println(str);
-                break;
-            case "headSet":
-                int[] temp2 = s.headSet(Integer.parseInt(tokens[1]));
-                String str1 = "{";
-                int in;
-                if (temp2.length == 0) {
-                    System.out.println("{}");
-                    break;
-                }
-                for (in = 0; in < temp2.length - 1; in++) {
-                    str1 += temp2[in] + ", ";
-                }
-                str1 += temp2[temp2.length - 1] + "}";
-                System.out.println(str1);
-                break;
-            case "last":
-                System.out.println(s.last());
-                break;
-            case "intersection":
-                SortedSet p = new SortedSet(10);
-                SortedSet t = new SortedSet(10);
-                int[] intArray = intArray(tokens[1]);
-                p.addAll(intArray);
-                intArray = intArray(tokens[2]);
-                t.addAll(intArray);
-                System.out.println(p.intersection(t));
-                break;
-            case "retainAll":
-                SortedSet q = new SortedSet(10);
-                intArray = intArray(tokens[1]);
-                q.addAll(intArray);
-                intArray = intArray(tokens[2]);
-                System.out.println(q.retainAll(intArray));
-                break;
-            default:
-                break;
-            }
+        	try{
+	            // read the line
+	            String line = stdin.nextLine();
+	            // split the line using space
+	            String[] tokens = line.split(" ");
+	            switch (tokens[0]) {
+	            case "print":
+	                System.out.println(s);
+	                break;
+	            case "addAll":
+	                String[] strArray = tokens[1].split(",");
+	                int[] intArray1 = new int[strArray.length];
+	                for (int i = 0; i < strArray.length; i++) {
+	                    intArray1[i] = Integer.parseInt(strArray[i]);
+	                }
+	                s.addAll(intArray1);
+	                break;
+	            case "subSet":
+	                String[] temp = tokens[1].split(",");
+	                if (Integer.parseInt(temp[0]) > Integer.parseInt(temp[1])) {
+	                    System.out.println("Invalid Arguments to Subset Exception");
+	                    break;
+	                }
+	                int[] temp1 = s.subSet(Integer.parseInt(temp[0]),
+	                                       Integer.parseInt(temp[1]));
+	                String str = "{";
+	                int i;
+	                if (temp1.length == 0) {
+	                    System.out.println("{}");
+	                    break;
+	                }
+	                for (i = 0; i < temp1.length - 1; i++) {
+	                    str += temp1[i] + ", ";
+	                }
+	                str += temp1[temp1.length - 1] + "}";
+	                System.out.println(str);
+	                break;
+	            case "headSet":
+	                int[] temp2 = s.headSet(Integer.parseInt(tokens[1]));
+	                String str1 = "{";
+	                int in;
+	                if (temp2.length == 0) {
+	                    System.out.println("{}");
+	                    break;
+	                }
+	                for (in = 0; in < temp2.length - 1; in++) {
+	                    str1 += temp2[in] + ", ";
+	                }
+	                str1 += temp2[temp2.length - 1] + "}";
+	                System.out.println(str1);
+	                break;
+	            case "last":
+	                System.out.println(s.last());
+	                break;
+	            case "intersection":
+	                SortedSet p = new SortedSet(10);
+	                SortedSet t = new SortedSet(10);
+	                int[] intArray = intArray(tokens[1]);
+	                p.addAll(intArray);
+	                intArray = intArray(tokens[2]);
+	                t.addAll(intArray);
+	                System.out.println(p.intersection(t));
+	                break;
+	            case "retainAll":
+	                SortedSet q = new SortedSet(10);
+	                intArray = intArray(tokens[1]);
+	                q.addAll(intArray);
+	                intArray = intArray(tokens[2]);
+	                System.out.println(q.retainAll(intArray));
+	                break;
+	            default:
+	                break;
+	            }
+        	} catch (Exception e){
+        		System.out.println(e.getMessage());
+        	}
         }
     }
 }
