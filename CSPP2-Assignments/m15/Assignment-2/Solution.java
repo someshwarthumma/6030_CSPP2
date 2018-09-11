@@ -5,7 +5,13 @@ import java.util.Arrays;
  * This is sorted set
  */
 class SortedSet {
+    /**
+     * List array
+     */
     private int[] list;
+    /**
+     * size of  list
+     */
     private int size;
     /**.
      * This is sorted set constructed
@@ -189,10 +195,21 @@ class SortedSet {
         }
         return temp;
     }
-
+    /**.
+     * This is sizee method to find the size;
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int sizee() {
         return size;
     }
+    /**.
+     * This is last method
+     *
+     * @return     { description_of_the_return_value }
+     *
+     * @throws     Exception  { exception_description }
+     */
     public int last() throws Exception {
         if (size == 0) {
             throw  new Exception("Set Empty Exception");
