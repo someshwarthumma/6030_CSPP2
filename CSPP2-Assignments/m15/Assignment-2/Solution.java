@@ -141,9 +141,14 @@ class SortedSet{
             /*int[] temp = new int[0];
             return temp;*/
         }
+        int j=0;
         int[] temp = new int[a];
         for (int i = 0; i < a; i++) {
             temp[i] = list[i];
+            j++;
+        }
+        if(j==0){
+        	throw new Exception("Set Empty Exception");
         }
         return temp;
     }
