@@ -73,23 +73,39 @@ class SortedSet{
         }
     }
 
+    /**
+     * { function_description }.
+     *
+     * @param      start1  The start 1
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int start(final int start1) {
+        for (int i = 0; i < size; i++) {
+            if (start1 <= list[i]) {
+                return i;
+            }
+        }
+        return -1;
+    }
 
-    public int indexForSubset(int element){
-    	if(getElement(0)>element){
-    		return 0;
-    	}
-    	if(getElement(size-1)<element){
-    		return size;
-    	}
-    	for(int i =size; i<=0;i++){
-    		if(list[i]<element){
-    			return i+1;
-    		}
-    	}
-    	if(getElement(size-1)<element){
-    		return size;
-    	}
-    	return -1;
+    /**
+     * { function_description }.
+     *
+     * @param      end1  The end 1
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int end(final int end1) {
+        for (int i = size - 1; i >= 0; i--) {
+            if (end1 >= list[i]) {
+                if (end1 > list[i]) {
+                    return i + 1;
+                }
+                return i;
+            }
+        }
+        return -1;
     }
 
 	public int getElement(int index){
@@ -104,8 +120,8 @@ class SortedSet{
             int[] subSet = new int[0];
             return subSet;
         }
-        int a = indexForSubset(start);
-        int b = indexForSubset(end);
+        int a = start(start);
+        int b = end(end);
         int[] subSet = new int[b - a];
         int i, j;
         for (i = a, j = 0; i < b; i++, j++) {
@@ -115,7 +131,7 @@ class SortedSet{
     }
 
     public int[] headSet(final int end) {
-        int a = indexForSubset(end);
+        int a = end(end);
         if (a == -1) {
             int[] temp = new int[0];
             return temp;
