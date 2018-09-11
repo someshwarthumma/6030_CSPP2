@@ -1,6 +1,8 @@
 import java.util.Scanner;
 import java.util.Arrays;
-
+/**.
+ * This is list ADT
+ */
 class List {
     //Implement all the methods mentioned to build a ListADT
 
@@ -76,7 +78,7 @@ class List {
     /**.
      * This is list
      */
-    public List() {
+    List() {
 
         // what are the two variables to be initialized here? think about the
         // private variables described above. What should be the default values?
