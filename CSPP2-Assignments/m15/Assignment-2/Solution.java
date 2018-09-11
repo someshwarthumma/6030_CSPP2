@@ -187,7 +187,24 @@ class SortedSet{
         }
         return false;
     }
-
+    /**.
+     * This is retain ALl method
+     *
+     * @param      array  The array
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public SortedSet retainAll(final int[] array) {
+        SortedSet retain = new SortedSet();
+        SortedSet newArray = new SortedSet();
+        newArray.addAll(array);
+        for (int i = 0; i < size; i++) {
+            if (newArray.contains(get(i))) {
+                retain.add(list[i]);
+            }
+        }
+        return retain;
+    }
 
 
 
@@ -298,7 +315,13 @@ public final class Solution {
                 t.addAll(intArray);
                 System.out.println(p.intersection(t));
                 break;
-            
+            case "retainAll":
+                SortedSet q = new SortedSet(10);
+                intArray = intArray(tokens[1]);
+                q.addAll(intArray);
+                intArray = intArray(tokens[2]);
+                System.out.println(q.retainAll(intArray));
+                break;
             default:
                 break;
             }
