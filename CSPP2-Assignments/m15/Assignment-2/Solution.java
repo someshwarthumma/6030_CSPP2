@@ -254,15 +254,17 @@ class SortedSet {
 }
 
 
-
+/**.
+ * This is solution class
+ */
 public final class Solution {
-    /**
+    /**.
      * Constructs the object.
      */
     private Solution() {
 
     }
-    /**
+    /**.
      * helper function to convert string input to int array.
      *
      * @param      str     { string input from test case file }
@@ -281,7 +283,7 @@ public final class Solution {
                .mapToInt(Integer::parseInt)
                .toArray();
     }
-    /**
+    /**.
      * main function to execute test cases.
      *
      * @param      args  The arguments
