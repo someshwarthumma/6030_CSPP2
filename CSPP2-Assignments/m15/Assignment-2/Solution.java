@@ -369,7 +369,8 @@ public final class Solution {
 					intArray = intArray(tokens[1]);
 					q.addAll(intArray);
 					intArray = intArray(tokens[2]);
-					System.out.println(q.retainAll(intArray));
+					System.out.println(q.
+						retainAll(intArray));
 					break;
 				default:
 					break;
