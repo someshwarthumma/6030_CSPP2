@@ -5,8 +5,8 @@ import java.util.Arrays;
  * This is sorted set
  */
 class SortedSet {
-	int[] list;
-	int size;
+	private int[] list;
+	private int size;
 	/**.
 	 * This is sorted set constructed
 	 */
