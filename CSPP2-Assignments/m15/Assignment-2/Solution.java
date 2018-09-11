@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 class SortedSet{
 	int[] list;
-	static int size;
+	int size;
 	SortedSet(){
 		list = new int[10];
 		size = 0;
@@ -147,6 +147,9 @@ class SortedSet{
         }
         return temp;
     }
+    public int sizee() {
+    	return size;
+    }
     public int last() {
         if (size == 0) {
             System.out.println("Set Empty Exception");
@@ -157,11 +160,11 @@ class SortedSet{
 
     public SortedSet intersection(final SortedSet givenSet) {
         SortedSet intersect = new SortedSet();
-        System.out.println("This is intersection");
-        for (int i = 0; i < size; i++) {
-        	System.out.println("for in intersection,i: "+ i);
+        
+        for (int i = 0; i < this.sizee(); i++) {
+        	
             if (givenSet.contains(list[i])) {
-            	System.out.println("adding to intersections");
+            	
                 intersect.add(list[i]);
             }
         }
@@ -293,6 +296,8 @@ public final class Solution {
                 p.addAll(intArray);
                 intArray = intArray(tokens[2]);
                 t.addAll(intArray);
+                System.out.println(p.sizee());
+                System.out.println(t.sizee());
                 System.out.println(p.intersection(t));
                 break;
             
