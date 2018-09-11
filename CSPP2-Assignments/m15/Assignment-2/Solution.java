@@ -5,11 +5,11 @@ import java.util.Arrays;
  * This is sorted set
  */
 class SortedSet {
-    /**
+    /**.
      * List array
      */
     private int[] list;
-    /**
+    /**.
      * size of  list
      */
     private int size;
@@ -26,7 +26,7 @@ class SortedSet {
      *
      * @param      capacity  capacity
      */
-    public SortedSet(int capacity) {
+    SortedSet(final int capacity) {
         list = new int[capacity];
         size = 0;
     }
@@ -140,7 +140,7 @@ class SortedSet {
      *
      * @return     { description_of_the_return_value }
      */
-    public int get(int index) {
+    public int get(final int index) {
         if (index >= 0 && index < size) {
             return list[index];
         }
