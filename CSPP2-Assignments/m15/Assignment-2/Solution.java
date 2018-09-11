@@ -303,10 +303,14 @@ public final class Solution {
 					System.out.println(s);
 					break;
 				case "addAll":
-					String[] strArray = tokens[1].split(",");
-					int[] intArray1 = new int[strArray.length];
-					for (int i = 0; i < strArray.length; i++) {
-						intArray1[i] = Integer.parseInt(strArray[i]);
+					String[] strArray = tokens[
+					1].split(",");
+					int[] intArray1 = new int[
+					strArray.length];
+					for (int i = 0; i < strArray.
+						length; i++) {
+						intArray1[i] = Integer.
+						parseInt(strArray[i]);
 					}
 					s.addAll(intArray1);
 					break;
