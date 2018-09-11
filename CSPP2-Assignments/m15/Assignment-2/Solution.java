@@ -152,10 +152,13 @@ class SortedSet{
     }
 
     public SortedSet intersection(final SortedSet givenSet) {
-        SortedSet intersect = new SortedSet(10);
-        for (int i = 0; i < this.size; i++) {
-            if (givenSet.contains(this.get(i))) {
-                intersect.add(this.get(i));
+        SortedSet intersect = new SortedSet(100);
+        System.out.println("This is intersection");
+        for (int i = 0; i < size; i++) {
+        	System.out.println("for in intersection,i: "+ i);
+            if (givenSet.contains(get(i))) {
+            	System.out.println("adding to intersections");
+                intersect.add(get(i));
             }
         }
         return intersect;
@@ -280,13 +283,13 @@ public final class Solution {
                 System.out.println(s.last());
                 break;
             case "intersection":
-                s = new SortedSet(10);
+                SortedSet p = new SortedSet(10);
                 SortedSet t = new SortedSet(10);
                 int[] intArray = intArray(tokens[1]);
-                s.addAll(intArray);
+                p.addAll(intArray);
                 intArray = intArray(tokens[2]);
                 t.addAll(intArray);
-                System.out.println(s.intersection(t));
+                System.out.println(p.intersection(t));
                 break;
             
             default:
