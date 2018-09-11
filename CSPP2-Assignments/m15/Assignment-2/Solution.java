@@ -336,14 +336,17 @@ public final class Solution {
 					System.out.println(str);
 					break;
 				case "headSet":
-					int[] temp2 = s.headSet(Integer.parseInt(tokens[1]));
+					int[] temp2 = s.
+					headSet(Integer.
+						parseInt(tokens[1]));
 					String str1 = "{";
 					int in;
 					if (temp2.length == 0) {
 						System.out.println("{}");
 						break;
 					}
-					for (in = 0; in < temp2.length - 1; in++) {
+					for (in = 0; in < temp2.
+						length - 1; in++) {
 						str1 += temp2[in] + ", ";
 					}
 					str1 += temp2[temp2.length - 1] + "}";
