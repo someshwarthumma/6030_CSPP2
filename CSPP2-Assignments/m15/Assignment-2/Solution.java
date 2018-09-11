@@ -5,6 +5,10 @@ import java.util.Arrays;
 class SortedSet{
 	int[] list;
 	static int size;
+	SortedSet(){
+		list = new int[10];
+		size = 0;
+	}
 	public SortedSet(int capacity){
 		list = new int[capacity];
 		size = 0;
@@ -152,13 +156,13 @@ class SortedSet{
     }
 
     public SortedSet intersection(final SortedSet givenSet) {
-        SortedSet intersect = new SortedSet(100);
+        SortedSet intersect = new SortedSet();
         System.out.println("This is intersection");
         for (int i = 0; i < size; i++) {
         	System.out.println("for in intersection,i: "+ i);
-            if (givenSet.contains(get(i))) {
+            if (givenSet.contains(list[i])) {
             	System.out.println("adding to intersections");
-                intersect.add(get(i));
+                intersect.add(list[i]);
             }
         }
         return intersect;
