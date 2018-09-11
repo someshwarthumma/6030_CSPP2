@@ -132,18 +132,14 @@ class SortedSet{
 
     public int[] headSet(final int end) {
         int a = end(end);
-        int j =0;
         if (a == -1) {
+        	System.out.println("Set Empty Exception");
             int[] temp = new int[0];
             return temp;
         }
         int[] temp = new int[a];
         for (int i = 0; i < a; i++) {
             temp[i] = list[i];
-            j++;
-        }
-        if(j==0){
-        	System.out.println("Set Empty Exception");
         }
         return temp;
     }
