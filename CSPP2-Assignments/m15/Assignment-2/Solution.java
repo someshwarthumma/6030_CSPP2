@@ -108,7 +108,7 @@ class SortedSet{
         return -1;
     }
 
-	public int getElement(int index){
+	public int get(int index){
 		if(index>=0 && index<size){
 			return list[index];
 		}
@@ -149,6 +149,33 @@ class SortedSet{
             return -1;
         }
         return list[size - 1];
+    }
+
+    public SortedSet intersection(final SortedSet givenSet) {
+        SortedSet intersect = new SortedSet(10);
+        for (int i = 0; i < this.size; i++) {
+            if (givenSet.contains(this.get(i))) {
+                intersect.add(this.get(i));
+            }
+        }
+        return intersect;
+
+    }
+
+    /**.
+     * This is contains method
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public boolean contains(final int item) {
+        for (int i = 0; i < size; i++) {
+            if (list[i] == item) {
+                return true;
+            }
+        }
+        return false;
     }
 
 
@@ -252,6 +279,16 @@ public final class Solution {
             case "last":
                 System.out.println(s.last());
                 break;
+            case "intersection":
+                s = new SortedSet(10);
+                SortedSet t = new SortedSet(10);
+                int[] intArray = intArray(tokens[1]);
+                s.addAll(intArray);
+                intArray = intArray(tokens[2]);
+                t.addAll(intArray);
+                System.out.println(s.intersection(t));
+                break;
+            
             default:
                 break;
             }
