@@ -153,14 +153,14 @@ class List {
      *
      */
 
-    /**.
-     * This is to remove the element at the given index
-     *
-     * @param      index  Integer
-     * 
-     * @param      Exception return exception message.
-     */
-    public void remove(final int index) throws Exception{
+    /**
+    * { function_description }
+    *
+    * @param      index      The index
+    *
+    * @throws     Exception  { exception_description }
+    */ 
+    public void remove(final int index) throws Exception {
         // write the logic for remove here. Think about what to do to the size
         // variable.
         if (index >= 0 && index < size) {
@@ -302,7 +302,7 @@ class List {
      *
      * @throws     Exception  { exception message }
      */
-    public void removeAll(final int[] newArray) throws Exception{
+    public void removeAll(final int[] newArray) throws Exception {
         // write the logic
         for (int j : newArray) {
             while (indexOf(j) != -1) {
@@ -320,7 +320,7 @@ class List {
     and also if start is greater than end.
     */
 
-    /**
+    /**.
      * This is sublist to find the siblist for the given indexes
      *
      * @param      start      start Index
@@ -376,7 +376,7 @@ class List {
         // write the logic for clear.
         size = 0;
     }
-    /**
+    /**.
      * This is method to find the count of the given number in a given list
      *
      * @param      item  The item
@@ -398,11 +398,11 @@ class List {
 /**.
  * This solution class.
  */
-public class Solution {
+public final class Solution {
     /**.
      * This is solution constructor
      */
-    private Solution(){
+    private Solution() {
         //This is solution constructor.
     }
     /**.
