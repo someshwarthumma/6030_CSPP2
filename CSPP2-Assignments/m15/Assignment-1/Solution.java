@@ -450,14 +450,15 @@ public final class Solution {
                     System.out.println(s.size());
                     break;
                 case "add":
-                    try{
-                    s.add(Integer.parseInt(tokens[1]),Integer.parseInt(tokens[2]));
+                    try {
+                    s.add(
+                        Integer.parseInt(tokens[1]),
+                        Integer.parseInt(tokens[2]));
                     break;
                     } catch (Exception e) {
                     s.add(Integer.parseInt(tokens[1]));
                     break;
                     }
-                    
                 case "print":
                     System.out.println(s);
                     break;
