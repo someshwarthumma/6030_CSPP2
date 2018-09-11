@@ -469,6 +469,12 @@ public class Solution{
                 case "clear":
 	                s.clear();
 	                break;
+
+	             case "count":
+	             	if(tokens.length==2){
+	             		s.count(Integer.parseInt(tokens[1]));
+	             	}
+	             	break;
             	default:
                 	break;
 			}
