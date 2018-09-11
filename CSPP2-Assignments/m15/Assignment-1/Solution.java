@@ -472,10 +472,10 @@ public class Solution{
 
 	             case "count":
 	             	//System.out.println("This is count:");
-	             	//if(tokens.length==2){
-	             	System.out.println(s.count(Integer.parseInt(tokens[1])));
+	             	if(tokens.length==2){
+	             		System.out.println(s.count(Integer.parseInt(tokens[1])));
 	             	
-	             	//}
+	             	}
 	             	break;
             	default:
                 	break;
