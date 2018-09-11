@@ -296,8 +296,6 @@ public final class Solution {
                 p.addAll(intArray);
                 intArray = intArray(tokens[2]);
                 t.addAll(intArray);
-                System.out.println(p.sizee());
-                System.out.println(t.sizee());
                 System.out.println(p.intersection(t));
                 break;
             
