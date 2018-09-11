@@ -199,7 +199,13 @@ class SortedSet {
         }
         return list[size - 1];
     }
-
+    /**.
+     * This is method for intersection
+     *
+     * @param      givenSet  The given set
+     *
+     * @return     { description_of_the_return_value }
+     */
     public SortedSet intersection(final SortedSet givenSet) {
         SortedSet intersect = new SortedSet();
 
