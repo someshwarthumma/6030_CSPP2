@@ -398,7 +398,7 @@ class List {
      * @param      index  index
      * @param      item   item
      */
-    public void add(int index, int item) {
+    public void add(final int index, final int item) {
         if (index <= size && index >= 0) {
             int[] list3 = new int[size - index];
             int j = 0;
