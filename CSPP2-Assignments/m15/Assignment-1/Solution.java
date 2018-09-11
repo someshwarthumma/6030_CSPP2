@@ -484,7 +484,7 @@ public class Solution {
                     break;
                 }
             } catch(Exception e){
-                System.out.println(e);
+                System.out.println(e.getMessage());
             }
 
         }
