@@ -318,7 +318,7 @@ public final class Solution {
 					String[] temp = tokens[1].split(",");
 					if (Integer.parseInt(temp[0]) > Integer.
 						parseInt(temp[1])) {
-				throw new Exception("Invalid Arguments to Subset Exception");
+	throw new Exception("Invalid Arguments to Subset Exception");
 					}
 					int[] temp1 = s.subSet(Integer.parseInt(temp[0]),
 					                       Integer.parseInt(temp[1]));
