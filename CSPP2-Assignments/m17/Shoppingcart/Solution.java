@@ -1,5 +1,3 @@
-import java.util.Arrays;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 /**.
@@ -25,10 +23,10 @@ class Item {
      * @param      q     quantity
      * @param      p     { unitprice }
      */
-    Item(String n, int q, int p) {
+    Item(final String n,final int q,final int p) {
         this.itemName = n;
         this.quantity = q;
-        this.unitPrice = (double)p;
+        this.unitPrice = (double) p;
     }
     /**.
      * This is Item constructor
@@ -36,7 +34,7 @@ class Item {
      * @param      n     { name }
      * @param      q     Quantity
      */
-    Item(String n, int q) {
+    Item(final String n,final int q) {
         this.itemName = n;
         this.quantity = q;
     }
@@ -69,7 +67,7 @@ class Item {
      *
      * @param      newQuantity  The new quantity
      */
-    public void setQuantity(int newQuantity) {
+    public void setQuantity(final int newQuantity) {
         this.quantity = newQuantity;
     }
 
@@ -111,7 +109,7 @@ class ShoppingCart {
      *
      * @param      catalogObj  catalog obj
      */
-    public void addToCatalog(Item catalogObj) {
+    public void addToCatalog(final Item catalogObj) {
         catalogList.add(catalogObj);
     }
     /**.
@@ -131,7 +129,7 @@ class ShoppingCart {
      *
      * @param      cartItem  The cartesian item
      */
-    public void addToCart(Item cartItem) {
+    public void addToCart(final Item cartItem) {
 
         for (int i = 0; i < catalogList.size(); i++) {
             if (catalogList.get(i).getName().equals(cartItem.getName())) {
@@ -154,7 +152,7 @@ class ShoppingCart {
      *
      * @param      removeItem  The remove item
      */
-    public void removeFromCart(Item removeItem) {
+    public void removeFromCart(final Item removeItem) {
         for (int i = 0; i < cartList.size(); i++) {
             if (cartList.get(i).getName().equals(removeItem.getName())) {
                 cartList.get(i).setQuantity(cartList.get(i).getQuantity() - removeItem.getQuantity());
@@ -197,7 +195,7 @@ class ShoppingCart {
      *
      * @param      coupon  The coupon
      */
-    public void applyCoupon(String coupon) {
+    public void applyCoupon(final String coupon) {
         if (coupon.equals("IND10") && flag == false) {
             totalSum = getTotalAmount() * 0.9;
             discount = getTotalAmount() * 0.1;
