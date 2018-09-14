@@ -85,6 +85,9 @@ class ShoppingCart {
 		for (int i = 0; i < cartList.size(); i++) {
 			if (cartList.get(i).getName().equals(removeItem.getName())) {
 				cartList.get(i).setQuantity(cartList.get(i).getQuantity() - removeItem.getQuantity());
+				if(cartList.get(i).getQuantity()==0){
+					cartList.remove(i);
+				}
 				return;
 			}
 		}
