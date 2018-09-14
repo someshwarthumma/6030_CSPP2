@@ -7,13 +7,18 @@ import java.util.Scanner;
 /**.
  * This is solution
  */
-public class Solution {
+public final class Solution {
     /**.
      * This is solution constructor
      */
-    private Solution(){
+    private Solution() {
         //This is solution
     }
+    /**.
+     * This is main
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         ShoppingCart s = new ShoppingCart();
