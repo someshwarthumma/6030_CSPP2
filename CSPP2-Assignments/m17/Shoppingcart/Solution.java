@@ -143,11 +143,13 @@ class ShoppingCart {
 	}
 
 	public double getPayableAmount() {
-
+		double tax;
 		if (flag) {
-			return (totalSum * 1.5 + totalSum);
+			tax = totalSum * 0.15;
+			return (totalSum - discount + tax);
 		}
-		return (getTotalAmount() + getTotalAmount() * 1.5);
+		tax = (getTotalAmount() * 0.15);
+		return (getTotalAmount() - discount + tax);
 	}
 
 	public void printInvoice() {
@@ -169,7 +171,7 @@ class ShoppingCart {
 			System.out.println("Tax:" + tax);
 		} else {
 			tax = (getTotalAmount() * 0.15);
-			System.out.println("Tax:" + tax);
+			System.out.println("Tax: " + tax);
 		}
 		System.out.println("Payable amount: " + (getTotalAmount() - discount + tax));
 
