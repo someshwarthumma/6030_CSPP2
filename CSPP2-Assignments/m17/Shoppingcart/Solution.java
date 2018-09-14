@@ -23,7 +23,7 @@ class Item {
      * @param      q     quantity
      * @param      p     { unitprice }
      */
-    Item(final String n,final int q,final int p) {
+    Item(final String n, final int q, final int p) {
         this.itemName = n;
         this.quantity = q;
         this.unitPrice = (double) p;
@@ -34,7 +34,7 @@ class Item {
      * @param      n     { name }
      * @param      q     Quantity
      */
-    Item(final String n,final int q) {
+    Item(final String n, final int q) {
         this.itemName = n;
         this.quantity = q;
     }
@@ -163,7 +163,9 @@ class ShoppingCart {
             }
         }
     }
-
+    /**.
+     * Shows the cartesian.
+     */
     public void showCart() {
         for (int i = 0; i < cartList.size(); i++) {
             Item obj = cartList.get(i);
@@ -172,7 +174,13 @@ class ShoppingCart {
             System.out.println(itemName + " " + itemQuantity);
         }
     }
-
+    /**.
+     * this is price method
+     *
+     * @param      name  The name
+     *
+     * @return     { description_of_the_return_value }
+     */
     private double price(String name) {
         for (int i = 0; i < catalogList.size(); i++) {
             if (catalogList.get(i).getName().equals(name)) {
@@ -181,7 +189,11 @@ class ShoppingCart {
         }
         return 0.0;
     }
-
+    /**.
+     * THis isgetTotalAmount
+     *
+     * @return     The total amount.
+     */
     public double getTotalAmount() {
         double sum = 0;
         for (int i = 0; i < cartList.size(); i++) {
@@ -191,7 +203,7 @@ class ShoppingCart {
         return sum;
     }
     /**.
-     * This is apply coupon 
+     * This is apply coupon
      *
      * @param      coupon  The coupon
      */
@@ -266,7 +278,6 @@ class ShoppingCart {
             System.out.println("Tax:" + tax);
         }
         System.out.println("Payable amount: " + (getTotalAmount() - discount + tax));
-
     }
 
 
@@ -276,9 +287,11 @@ class ShoppingCart {
 
 
 
-
+/**.
+ * This is solution
+ */
 public class Solution {
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         ShoppingCart s = new ShoppingCart();
         int num = Integer.parseInt(scan.nextLine());
@@ -317,8 +330,6 @@ public class Solution {
             case "print":
                 s.printInvoice();
                 break;
-
-
             }
         }
     }
