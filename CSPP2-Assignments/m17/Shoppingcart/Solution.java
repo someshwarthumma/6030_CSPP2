@@ -161,15 +161,15 @@ class ShoppingCart {
 			System.out.println(itemName + " " + itemQuantity + " " + itemPrice);
 		}
 
-		System.out.println("totalAmount: " + getTotalAmount());
+		//System.out.println("totalAmount: " + getTotalAmount());
 		System.out.println("Total:" + getTotalAmount());
-		System.out.println("Disc%: " + discount);
+		System.out.println("Disc%:" + discount);
 		if (flag == true) {
 			tax = totalSum * 0.15;
-			System.out.println("Tax: " + tax);
+			System.out.println("Tax:" + tax);
 		} else {
 			tax = (getTotalAmount() * 0.15);
-			System.out.println("Tax: " + tax);
+			System.out.println("Tax:" + tax);
 		}
 		System.out.println("Payable amount: " + (getTotalAmount() - discount + tax));
 
