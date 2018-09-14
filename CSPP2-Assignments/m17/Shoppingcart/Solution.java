@@ -158,7 +158,7 @@ class ShoppingCart {
 			Item obj = cartList.get(i);
 			String itemName = obj.getName();
 			int itemQuantity = obj.getQuantity();
-			double itemPrice = obj.getPrice();
+			double itemPrice = price(obj.getName());
 			System.out.println(itemName + " " + itemQuantity + " " + itemPrice);
 		}
 
