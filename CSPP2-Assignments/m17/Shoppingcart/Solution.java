@@ -148,9 +148,11 @@ class ShoppingCart {
 	public double getPayableAmount() {
 		double tax;
 		if (flag) {
+			System.out.println("This is totalSum in getPay:");
 			tax = totalSum * 0.15;
 			return (totalSum - discount + tax);
 		}
+		System.out.println("This is getTotalAmount() in getPay:");
 		tax = (getTotalAmount() * 0.15);
 		return (getTotalAmount() - discount + tax);
 	}
