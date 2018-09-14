@@ -167,11 +167,11 @@ class ShoppingCart {
 		System.out.println("Disc%: " + discount);
 		if (flag == true) {
 
-			System.out.println("Tax: " + totalSum * 1.5);
+			System.out.println("Tax: " + totalSum * 0.15);
 		} else {
-			System.out.println("Tax: " + (getTotalAmount() * 1.5));
+			System.out.println("Tax: " + (getTotalAmount() * 0.15));
 		}
-		System.out.println(getTotalAmount());
+		System.out.println("Payable amount: "+(getTotalAmount()-discount));
 
 	}
 
