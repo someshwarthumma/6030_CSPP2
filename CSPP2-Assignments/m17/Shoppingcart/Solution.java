@@ -39,14 +39,14 @@ class Item {
 class ShoppingCart {
 	List< Item >catalogList;
 	List<Item>cartList;
-	ShoppingCart(){
+	ShoppingCart() {
 		catalogList = new List<Item>();
 		cartList = new List<Item>();
 	}
 	public static double totalSum = 0;
 	private static boolean flag = false;
 	public static double discount = 0.0;
-	
+
 
 	public void addToCatalog(Item catalogObj) {
 		catalogList.add(catalogObj);
@@ -58,18 +58,18 @@ class ShoppingCart {
 			String itemName = obj.getName();
 			int itemQuantity = obj.getQuantity();
 			double itemPrice = obj.getPrice();
-			System.out.println(itemName +" "+ itemQuantity +" "+ itemPrice);
+			System.out.println(itemName + " " + itemQuantity + " " + itemPrice);
 		}
 	}
 
 	public void addToCart(Item cartItem) {
 
-		for (int i = 0; i <catalogList.size(); i++) {
+		for (int i = 0; i < catalogList.size(); i++) {
 			if (catalogList.get(i).getName().equals(cartItem.getName())) {
 				if (cartItem.getQuantity() <= catalogList.get(i).getQuantity()) {
-					for(int j=0;j<cartList.size();j++){
-						if(cartList.get(j).getName().equals(cartItem.getName())){
-							cartList.get(j).setQuantity(cartList.get(j).getQuantity()+cartItem.getQuantity());
+					for (int j = 0; j < cartList.size(); j++) {
+						if (cartList.get(j).getName().equals(cartItem.getName())) {
+							cartList.get(j).setQuantity(cartList.get(j).getQuantity() + cartItem.getQuantity());
 							return;
 						}
 					}
@@ -99,9 +99,9 @@ class ShoppingCart {
 		}
 	}
 
-	private double price(String name){
-		for(int i =0;i<catalogList.size();i++){
-			if(catalogList.get(i).getName().equals(name)){
+	private double price(String name) {
+		for (int i = 0; i < catalogList.size(); i++) {
+			if (catalogList.get(i).getName().equals(name)) {
 				return catalogList.get(i).getPrice();
 			}
 		}
@@ -111,7 +111,7 @@ class ShoppingCart {
 	public double getTotalAmount() {
 		double sum = 0;
 		for (int i = 0; i < cartList.size(); i++) {
-			sum += cartList.get(i).getQuantity()*price(cartList.get(i).getName());
+			sum += cartList.get(i).getQuantity() * price(cartList.get(i).getName());
 			//System.out.println(sum);
 		}
 		return sum;
@@ -153,6 +153,7 @@ class ShoppingCart {
 	}
 
 	public void printInvoice() {
+		double tax;
 		System.out.println("Name   quantity   Price");
 		for (int i = 0; i < cartList.size(); i++) {
 			Item obj = cartList.get(i);
@@ -166,12 +167,13 @@ class ShoppingCart {
 		System.out.println("Total:" + getTotalAmount());
 		System.out.println("Disc%: " + discount);
 		if (flag == true) {
-
-			System.out.println("Tax: " + totalSum * 0.15);
+			tax = totalSum * 0.15;
+			System.out.println("Tax: " + tax);
 		} else {
-			System.out.println("Tax: " + (getTotalAmount() * 0.15));
+			tax = (getTotalAmount() * 0.15);
+			System.out.println("Tax: " + tax);
 		}
-		System.out.println("Payable amount: "+(getTotalAmount()-discount));
+		System.out.println("Payable amount: " + (getTotalAmount() - discount));
 
 	}
 
@@ -188,7 +190,7 @@ public class Solution {
 		Scanner scan = new Scanner(System.in);
 		ShoppingCart s = new ShoppingCart();
 		int num = Integer.parseInt(scan.nextLine());
-		
+
 		for (int i = 0; i < num; i++) {
 			String[] tokens = scan.nextLine().split(" ");
 			switch (tokens[0]) {
