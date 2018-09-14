@@ -11,7 +11,7 @@ class Item {
 	Item(String n, int q, int p) {
 		this.itemName = n;
 		this.quantity = q;
-		this.unitPrice = p;
+		this.unitPrice = (double)p;
 	}
 
 	Item(String n, int q) {
@@ -99,10 +99,20 @@ class ShoppingCart {
 		}
 	}
 
+	private double price(String name){
+		for(int i =0;i<catalogList.size();i++){
+			if(catalogList.get(i).getName().equals(name)){
+				return catalogList.get(i).getPrice();
+			}
+		}
+		return 0.0;
+	}
+
 	public double getTotalAmount() {
 		double sum = 0;
 		for (int i = 0; i < cartList.size(); i++) {
-			sum += cartList.get(i).getPrice();
+			sum += cartList.get(i).getQuantity()*price(cartList.get(i).getName());
+			//System.out.println(sum);
 		}
 		return sum;
 	}
