@@ -141,7 +141,7 @@ class ShoppingCart {
 			discount = getTotalAmount() * 0.5;
 			flag = true;
 			return;
-		} else {
+		} else if(flag == false){
 			System.out.println("Invalid coupon");
 		}
 
