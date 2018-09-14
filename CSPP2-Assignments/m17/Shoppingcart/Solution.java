@@ -156,7 +156,7 @@ class ShoppingCart {
 */
 			return (totalSum + tax);
 		}
-		System.out.println("This is getTotalAmount() in getPay:");
+		//System.out.println("This is getTotalAmount() in getPay:");
 		tax = (getTotalAmount() * 0.15);
 		return (getTotalAmount() - discount + tax);
 	}
