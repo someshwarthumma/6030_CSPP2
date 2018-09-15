@@ -26,7 +26,7 @@ try{
 			System.out.println(questionsObj.get(i).getQueston()+" does not have enough answer choices");
 			return;
 		}
-		questionsObj.add(new Questions(d[0],choices,Integer.parseInt(d[2]),Integer.parseInt(d[3]),Integer.parseInt(d[4])));;
+		questionsObj.add(new Questions(d[0],choices,d[2],Integer.parseInt(d[3]),Integer.parseInt(d[4])));;
 	}
 	if(no==0){
 		System.out.println("Quiz does not have questions");
@@ -41,8 +41,13 @@ try{
 public void startQuiz(Scanner s,int num){
 	if(num==totalQuestion){
 		for(int i=0;i<num;i++){
+			try{
 			System.out.println(questionsObj.get(i).getQueston()+"("+questionsObj.get(i).getMaxMarks()+")");
-			String[] options = questionsObj.get(i).getChoices();
+			
+			} catch(Exception e){
+				return;
+			}String[] options = questionsObj.get(i).getChoices();
+
 			//System.out.println("Oprions length()"+options.length);
 			for(int j=0;j<options.length-1;j++){
 				//System.out.println("This is for in for:");
@@ -53,9 +58,8 @@ public void startQuiz(Scanner s,int num){
 			String chosenOption=s.nextLine();
 			//System.out.println("Chosen: "+chosenOption);
 			//System.out.println("obj ans: "+"choice "+questionsObj.get(i).getCorrect());
-			String[] ch = questionsObj.get(i).getChoices();
-			int index = questionsObj.get(i).getCorrect();
-			if(chosenOption.equals(ch[index])){
+		
+			if(chosenOption.equals("choice "+questionsObj.get(i).getCorrect())){
 				marks.add(questionsObj.get(i).getMaxMarks());
 			}else{
 				marks.add(questionsObj.get(i).getPenalty());
