@@ -1,0 +1,187 @@
+import java.util.Scanner;
+
+class Questions{
+	private String question;
+	private String[] choices;
+	private String correct;
+	private int maxMarks;
+	private int penalty;
+	public Questions(String qu,String[] ch,String co,int ma,int pe){
+		this.question=qu;
+		this.choices = ch;
+		this.correct = "choice "+co;
+		this.maxMarks= ma;
+		this.penalty = pe;
+	}
+
+	public String getQueston(){
+		return this.question;
+	}
+	public String[] getChoices(){
+		return this.choices;
+	}
+	public String getCorrect(){
+		return this.correct;
+	}
+	public int getMaxMarks(){
+		return this.maxMarks;
+	}
+	public int getPenalty(){
+		return this.penalty;
+	}
+
+
+
+}
+
+class Quiz{
+	List<Questions>questionsObj;
+	static int totalQuestion;
+	List<Integer>marks;
+public Quiz(){
+	questionsObj = new List<Questions>();
+	marks = new List<Integer>();
+}
+
+
+public void loadQuestions(Scanner s,int no){
+
+	totalQuestion = no;
+	for(int i=0;i<no;i++){
+		String[] d = s.nextLine().split(":");
+		if(d.length!=5){
+			System.out.println("Error! Malformed question");
+			return;
+		}
+		String[] choices = d[1].split(",");
+		if(choices.length<2){
+			System.out.println("“<question text> does not have enough answer choices");
+			return;
+		}
+		questionsObj.add(new Questions(d[0],choices,d[2],Integer.parseInt(d[3]),Integer.parseInt(d[4])));;
+	}
+	if(no==0){
+		System.out.println("Quiz does not have questions");
+		return;
+	}
+	System.out.println(no+" are added to the quiz");
+}
+
+public void startQuiz(Scanner s,int num){
+	if(num==totalQuestion){
+		for(int i=0;i<num;i++){
+			System.out.println(questionsObj.get(i).getQueston()+"("+questionsObj.get(i).getMaxMarks()+")");
+			String[] options = questionsObj.get(i).getChoices();
+			//System.out.println("Oprions length()"+options.length);
+			for(int j=0;j<options.length-1;j++){
+				//System.out.println("This is for in for:");
+				System.out.print(options[j]+"	");
+			}
+			System.out.println(options[options.length-1]);
+			System.out.println();
+			String chosenOption=s.nextLine();
+			//System.out.println("Chosen: "+chosenOption);
+			//System.out.println("obj ans: "+"choice "+questionsObj.get(i).getCorrect());
+			if(chosenOption.equals(questionsObj.get(i).getCorrect())){
+				marks.add(questionsObj.get(i).getMaxMarks());
+			}else{
+				marks.add(questionsObj.get(i).getPenalty());
+			}
+		}
+	}
+
+}
+
+
+public void displayScore(){
+	int sum =0;
+	int lengthMarks = marks.size();
+	for(int i =0; i<lengthMarks;i++){
+		System.out.println(questionsObj.get(i).getQueston());
+		sum = sum + marks.get(i);
+		if(marks.get(i)>0){
+			System.out.println(" Correct Answer! - Marks Awarded: "+marks.get(i));
+		} else {
+			System.out.println(" Wrong Answer! - Penalty: "+marks.get(i));
+		}
+	}
+	if(totalQuestion==0){
+		return;
+	}
+
+	System.out.println("Total Score: "+sum);
+}
+
+}
+
+/**
+ * Solution class for code-eval.
+ */
+public final class Solution {
+     /**
+     * Constructs the object.
+     */
+    private Solution() {
+        // leave this blank
+    }
+    /**
+     * main function to execute test cases.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
+         // instantiate this Quiz
+        Quiz q = new Quiz();
+         // code to read the test cases input file
+        Scanner s = new Scanner(System.in);
+        // check if there is one more line to process
+        while (s.hasNext()) {
+            // read the line
+            String line = s.nextLine();
+             // split the line using space
+            String[] tokens = line.split(" ");
+              // based on the list operation invoke the corresponding method
+            switch (tokens[0]) {
+                case "LOAD_QUESTIONS":
+                System.out.println("|----------------|");
+                System.out.println("| Load Questions |");
+                System.out.println("|----------------|");
+                q.loadQuestions(s, Integer.parseInt(tokens[1]));
+                break;
+                case "START_QUIZ":
+                System.out.println("|------------|");
+                System.out.println("| Start Quiz |");
+                System.out.println("|------------|");
+                q.startQuiz(s, Integer.parseInt(tokens[1]));
+
+                break;
+                case "SCORE_REPORT":
+                System.out.println("|--------------|");
+                System.out.println("| Score Report |");
+                System.out.println("|--------------|");
+                q.displayScore();
+                break;
+                default:
+                break;
+            }
+        }
+    }
+    
+   /* public static void loadQuestions(final Scanner s, final Quiz quiz, final int questionCount) {
+        // write your code here to read the questions from the console
+        // tokenize the question line and create the question object
+        // add the question objects to the quiz class
+    }*/
+
+    
+    /*public static void startQuiz(final Scanner s, final Quiz quiz, final int answerCount) {
+        // write your code here to display the quiz questions
+        // read the user responses from the console
+        // store the user respones in the quiz object
+    }
+*/
+    
+    /*public static void displayScore(final Quiz quiz) {
+        // write your code here to display the score report
+    }*/
+}
