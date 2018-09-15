@@ -6,6 +6,7 @@ class Quiz{
 	List<Questions>questionsObj;
 	static int totalQuestion;
 	List<Integer>marks;
+	static boolean flag = false;
 public Quiz(){
 	questionsObj = new List<Questions>();
 	marks = new List<Integer>();
@@ -18,6 +19,7 @@ try{
 	for(int i=0;i<no;i++){
 		String[] d = s.nextLine().split(":");
 		if(d.length!=5){
+			flag = true;
 			System.out.println("Error! Malformed question");
 			return;
 		}
@@ -71,6 +73,9 @@ public void startQuiz(Scanner s,int num){
 
 
 public void displayScore(){
+	if(flag==true){
+		return;
+	}
 	int sum =0;
 	int lengthMarks = marks.size();
 	for(int i =0; i<lengthMarks;i++){
