@@ -13,7 +13,7 @@ public Quiz(){
 
 
 public void loadQuestions(Scanner s,int no){
-
+try{
 	totalQuestion = no;
 	for(int i=0;i<no;i++){
 		String[] d = s.nextLine().split(":");
@@ -23,7 +23,7 @@ public void loadQuestions(Scanner s,int no){
 		}
 		String[] choices = d[1].split(",");
 		if(choices.length<2){
-			System.out.println("“<question text> does not have enough answer choices");
+			System.out.println(questionsObj.get(i).getQueston()+" does not have enough answer choices");
 			return;
 		}
 		questionsObj.add(new Questions(d[0],choices,d[2],Integer.parseInt(d[3]),Integer.parseInt(d[4])));;
@@ -33,6 +33,9 @@ public void loadQuestions(Scanner s,int no){
 		return;
 	}
 	System.out.println(no+" are added to the quiz");
+	} catch ( Exception e){
+
+	}
 }
 
 public void startQuiz(Scanner s,int num){
