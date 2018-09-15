@@ -25,7 +25,7 @@ try{
 		}
 		String[] choices = d[1].split(",");
 		if(choices.length<2){
-			flag=true;
+			flag=  true;
 			System.out.println(questionsObj.get(i).getQueston()+" does not have enough answer choices");
 			return;
 		}
