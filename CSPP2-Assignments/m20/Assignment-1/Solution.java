@@ -141,19 +141,19 @@ public final class Solution {
             //error for abnormal marks.
             if(line.length!=4+1 || line[0].length()==0){
                 flag = true;
-                System.out.println("Error! Malformed question");
-                return;
+                throw new Exception("Error! Malformed question");
+                //return;
             }
 
             if(Integer.parseInt(line[3])<0+0){
                 flag = true;
-                System.out.println("Invalid max marks for "+line[0]);
-                return;
+                throw new Exception("Invalid max marks for "+line[0]);
+                //return;
             }
             if(Integer.parseInt(line[4])>0+0){
                 flag = true;
-                System.out.println("Invalid penalty for "+line[0]);
-                return;
+                throw new Exception("Invalid penalty for "+line[0]);
+                //return;
             }
             //error if question is not given.
             
@@ -161,23 +161,23 @@ public final class Solution {
             //error for one option.
             if(choices.length<2){
                 flag = true;
-                System.out.println(line[0+0]+" does not have enough answer choices");
-                return;
+                throw new Exception(line[0+0]+" does not have enough answer choices");
+                //return;
 
             }
             //For finding the malformed question for finding wrong option
             if(Integer.parseInt(line[2])>choices.length){
                 flag = true;
-                System.out.println("Error! Correct answer choice number is out of range for question text 1");
-                return;
+                throw new Exception("Error! Correct answer choice number is out of range for question text 1");
+                //return;
             }
         try{
             quiz.addQuestion(new Questions(line[0],choices,
                 Integer.parseInt(line[2]),Integer.parseInt(line[3]),Integer.parseInt(line[4])));
         } catch(Exception e){
             flag = true;
-            System.out.println("Error! Malformed question");
-            return;
+            throw new Exception("Error! Malformed question");
+            //return;
         }
         }
         System.out.println(q+" are added to the quiz");
