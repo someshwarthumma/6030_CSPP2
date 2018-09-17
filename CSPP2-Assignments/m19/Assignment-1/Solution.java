@@ -18,7 +18,7 @@ try{
 	totalQuestion = no;
 	for(int i=0;i<no;i++){
 		String[] d = s.nextLine().split(":");
-		if(d.length!=5 || d[0]==""){
+		if(d.length!=5 || d[0]==null){
 			flag = true;
 			throw new Exception("Error! Malformed question");
 			//return;
