@@ -146,8 +146,14 @@ public final class Solution {
                 System.out.println("Error! Correct answer choice number is out of range for question text 1");
                 return;
             }
+        try{
             quiz.addQuestion(new Questions(line[0],choices,
                 Integer.parseInt(line[2]),Integer.parseInt(line[3]),Integer.parseInt(line[4])));
+        } catch(Exception e){
+            flag = true;
+            System.out.println("Error! Malformed question");
+            return;
+        }
         }
         System.out.println(q+" are added to the quiz");
         
