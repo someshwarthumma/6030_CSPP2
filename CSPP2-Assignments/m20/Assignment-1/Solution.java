@@ -134,10 +134,16 @@ public final class Solution {
             return;
         }
 
+
         
 
         totalGivenQuestion = q;
         for(int i =0; i<q;i++){
+            if(quiz.getQuestion(i).getQuestion().length()==0){
+                    flag=true;
+                    System.out.println("Error! Malformed question");
+                    return;
+                }
             String[] line = s.nextLine().split(":");
             String[] choices = line[1].split(",");
             //For finding the malformed question for finding wrong option
@@ -177,11 +183,6 @@ public final class Solution {
         if(totalGivenQuestion==q){
             //printing the question with choices.
             for(int i =0;i<q;i++){
-                if(quiz.getQuestion(i).getQuestion().length()==0){
-                    flag=true;
-                    System.out.println("Error! Malformed question");
-                    return;
-                }
                 System.out.println(quiz.getQuestion(i).getQuestion()+"("+quiz.getQuestion(i).getMaxMarks()+")");
                 String[] temp =quiz.getQuestion(i).getChoices();
 
