@@ -4,6 +4,9 @@ import java.util.Scanner;
  * Class for quiz.
  */
 class Quiz {
+    /**.
+     * This is Question bj
+     */
     List<Questions>questionsObj;
     /**.
      * { var_description }.
@@ -13,22 +16,22 @@ class Quiz {
      * { var_description }.
      */
     private Questions[] questions;
-    /**
+    /**.
      * { var_description }.
      */
     private int size;
-    /**
+    /**.
      * Constructs the object.
      */
     Quiz() {
-        /**
+        /**.
          * This is question obj for list
          */
         questionsObj = new List<Questions>();
     }
 
 
-    /**
+    /**.
      * Adds a question.
      *
      * @param      q     The question
@@ -36,7 +39,7 @@ class Quiz {
     public void addQuestion(final Questions q) {
         questionsObj.add(q);
     }
-    /**
+    /**.
      * Gets the question.
      *
      * @param      index  The index
@@ -49,17 +52,17 @@ class Quiz {
     }
 
 }
-/**
+/**.
  * Solution class for code-eval.
  */
 public final class Solution {
-    /**
+    /**.
     * Constructs the object.
     */
     private Solution() {
         // leave this blank
     }
-    /**
+    /**.
      * This is marklist for list of type integer
      */
     static List<Integer>marksList = new List<Integer>();
@@ -67,7 +70,7 @@ public final class Solution {
      * boolean flag for error checking
      */
     static boolean flag = false;
-    /**
+    /**.
      * main function to execute test cases.
      *
      * @param      args  The arguments
@@ -116,7 +119,7 @@ public final class Solution {
             }
         }
     }
-    /**
+    /**.
      * Loads questions.
      *
      * @param      scan       The scan
@@ -125,7 +128,7 @@ public final class Solution {
      *
      */
     public static void loadQuestions(final Scanner s,
-                                     final Quiz quiz, final int q) {
+        final Quiz quiz, final int q) {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
@@ -194,7 +197,7 @@ public final class Solution {
 
     static int totalGivenQuestion;
 
-    /**
+    /**.
      * Starts a quiz.
      *
      * @param      scan  The scan
@@ -232,7 +235,7 @@ public final class Solution {
 
         }
     }
-    /**
+    /**.
      * Displays the score report.
      *
      * @param      quiz     The quiz object
