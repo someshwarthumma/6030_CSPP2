@@ -179,7 +179,7 @@ public final class Solution {
                 if (Integer.parseInt(line[two]) > choices.length) {
                     flag = true;
                     throw new Exception(
-        "Error! Correct answer choice number is out of range for " + line[zero]);
+    "Error! Correct answer choice number is out of range for " + line[zero]);
                     //return;
                 }
                 try {
