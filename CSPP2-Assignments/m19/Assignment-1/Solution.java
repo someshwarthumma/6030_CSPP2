@@ -30,12 +30,14 @@ try{
 			//return;
 		}
 		if(Integer.parseInt(d[2])>choices.length){
+			flag = true;
 			throw new Exception("Error! Correct answer choice number is out of range for question text 1");
 			//return;
 		}
 		questionsObj.add(new Questions(d[0],choices,Integer.parseInt(d[2]),Integer.parseInt(d[3]),Integer.parseInt(d[4])));;
 	}
 	if(no==0){
+		flag = true;
 		throw new Exception("Quiz does not have questions");
 		//return;
 	}
@@ -148,6 +150,9 @@ public final class Solution {
                 System.out.println("|------------|");
                 System.out.println("| Start Quiz |");
                 System.out.println("|------------|");
+                /*if(flag==true){
+                	break;
+                }*/
                 q.startQuiz(s, Integer.parseInt(tokens[1]));
 
                 break;
@@ -155,6 +160,9 @@ public final class Solution {
                 System.out.println("|--------------|");
                 System.out.println("| Score Report |");
                 System.out.println("|--------------|");
+                /*if(flag==true){
+                	break;
+                }*/
                 q.displayScore();
                 break;
                 default:
