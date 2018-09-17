@@ -26,7 +26,7 @@ try{
 		String[] choices = d[1].split(",");
 		if(choices.length<2){
 			flag=  true;
-			throw new Exception("trick  question  does not have enough answer choices");
+			throw new Exception("trick question  does not have enough answer choices");
 			//return;
 		}
 		if(Integer.parseInt(d[2])>choices.length){
