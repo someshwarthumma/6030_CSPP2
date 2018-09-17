@@ -140,6 +140,17 @@ public final class Solution {
         totalGivenQuestion = q;
         for(int i =0; i<q;i++){
             String[] line = s.nextLine().split(":");
+            //error for abnormal marks.
+            if(Integer.parseInt(line[3])<0+0){
+                flag = true;
+                System.out.println("Invalid marks for "+line[0]);
+                return;
+            }
+            if(Integer.parseInt(line[4])>0+0){
+                flag = true;
+                System.out.println("Invalid Penalty for "+line[0]);
+                return;
+            }
             //error if question is not given.
             if(line.length!=4+1){
                 flag = true;
