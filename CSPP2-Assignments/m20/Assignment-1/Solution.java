@@ -141,22 +141,24 @@ public final class Solution {
         for(int i =0; i<q;i++){
             String[] line = s.nextLine().split(":");
             //error for abnormal marks.
-            if(Integer.parseInt(line[3])<0+0){
-                flag = true;
-                System.out.println("Invalid marks for "+line[0]);
-                return;
-            }
-            if(Integer.parseInt(line[4])>0+0){
-                flag = true;
-                System.out.println("Invalid Penalty for "+line[0]);
-                return;
-            }
-            //error if question is not given.
             if(line.length!=4+1){
                 flag = true;
                 System.out.println("Error! Malformed question");
                 return;
             }
+
+            if(Integer.parseInt(line[3])<0+0){
+                flag = true;
+                System.out.println("Invalid max marks for "+line[0]);
+                return;
+            }
+            if(Integer.parseInt(line[4])>0+0){
+                flag = true;
+                System.out.println("Invalid penalty for "+line[0]);
+                return;
+            }
+            //error if question is not given.
+            
             String[] choices = line[1].split(",");
             //error for one option.
             if(choices.length<2){
