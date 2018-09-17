@@ -128,14 +128,12 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
+    try{
         if(q==0){
             flag=true;
-            System.out.println("Quiz does not have questions");
-            return;
+            throw new Exception("Quiz does not have questions");
+            //return;
         }
-
-
-        
 
         totalGivenQuestion = q;
         for(int i =0; i<q;i++){
@@ -184,7 +182,9 @@ public final class Solution {
         }
         System.out.println(q+" are added to the quiz");
         
-
+        } catch(Exception e){
+            System.out.println(e.getMessage());
+        }
     }
 
     static int totalGivenQuestion;
