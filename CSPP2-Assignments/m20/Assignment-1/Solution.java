@@ -131,7 +131,7 @@ public final class Solution {
             quiz.addQuestion(new Questions(line[0],choices,
                 Integer.parseInt(line[2]),Integer.parseInt(line[3]),Integer.parseInt(line[4])));
         }
-        System.out.println(q+"are added to the quiz");
+        System.out.println(q+" are added to the quiz");
         
 
     }
@@ -162,7 +162,7 @@ public final class Solution {
                 String[] temp =quiz.getQuestion(i).getChoices();
 
                 for(int j=0;j<temp.length-1;j++){
-                    System.out.print(temp[i]);
+                    System.out.print(temp[i]+"  ");
                 }
                 System.out.println(temp[temp.length-1]);
                 System.out.println();
