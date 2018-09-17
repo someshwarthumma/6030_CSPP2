@@ -162,7 +162,7 @@ public final class Solution {
                 String[] temp =quiz.getQuestion(i).getChoices();
 
                 for(int j=0;j<temp.length-1;j++){
-                    System.out.print(temp[i]+"  ");
+                    System.out.print(temp[j]+"        ");
                 }
                 System.out.println(temp[temp.length-1]);
                 System.out.println();
