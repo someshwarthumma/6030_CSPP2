@@ -140,12 +140,20 @@ public final class Solution {
         totalGivenQuestion = q;
         for(int i =0; i<q;i++){
             String[] line = s.nextLine().split(":");
+            //error if question is not given.
             if(line.length!=4+1){
                 flag = true;
                 System.out.println("Error! Malformed question");
                 return;
             }
             String[] choices = line[1].split(",");
+            //error for one option.
+            if(choices.length<2){
+                flag = true;
+                System.out.println(line[0+0]+"doesnt have enough choices");
+                return;
+
+            }
             //For finding the malformed question for finding wrong option
             if(Integer.parseInt(line[2])>choices.length){
                 flag = true;
