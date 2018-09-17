@@ -7,7 +7,7 @@ class Quiz {
     /**.
      * This is Question bj
      */
-    List<Questions>questionsObj;
+    private List < Questions > questionsObj;
     /**.
      * { var_description }.
      */
@@ -42,7 +42,7 @@ class Quiz {
     /**.
      * Gets the question.
      *
-     * @param      index  The index
+     * @param      i  The index
      *
      * @return     The question.
      */
@@ -65,7 +65,7 @@ public final class Solution {
     /**.
      * This is marklist for list of type integer
      */
-    static List<Integer>marksList = new List<Integer>();
+    static List < Integer > marksList = new List < Integer > ();
     /**
      * boolean flag for error checking
      */
@@ -122,7 +122,7 @@ public final class Solution {
     /**.
      * Loads questions.
      *
-     * @param      scan       The scan
+     * @param      s       The scan
      * @param      quiz       The quiz
      * @param      q          The question count
      *
@@ -143,13 +143,15 @@ public final class Solution {
             for (int i = 0; i < q; i++) {
                 String[] line = s.nextLine().split(":");
                 //error for abnormal marks.
-                if (line.length != 4 + 1 || line[0].length() == 0) {
+                final int five = 5;
+                final int zero = 0;
+                if (line.length != five || line[0].length() == zero) {
                     flag = true;
                     throw new Exception("Error! Malformed question");
                     //return;
                 }
 
-                if (Integer.parseInt(line[3]) < 0 + 0) {
+                if (Integer.parseInt(line[3]) < zero) {
                     flag = true;
                     throw new Exception("Invalid max marks for " + line[0]);
                     //return;
