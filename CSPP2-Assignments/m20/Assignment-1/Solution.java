@@ -100,7 +100,7 @@ public final class Solution {
                 System.out.println("|------------|");
                 System.out.println("| Start Quiz |");
                 System.out.println("|------------|");
-                if (flag ) {
+                if (flag) {
                     break;
                 }
                 startQuiz(s, q, Integer.parseInt(tokens[1]));
@@ -109,7 +109,7 @@ public final class Solution {
                 System.out.println("|--------------|");
                 System.out.println("| Score Report |");
                 System.out.println("|--------------|");
-                if (flag ) {
+                if (flag) {
                     break;
                 }
                 displayScore(q);
@@ -171,7 +171,7 @@ public final class Solution {
                 if (choices.length < two) {
                     flag = true;
                     throw new Exception(line[zero]
-                        +" does not have enough answer choices");
+                        + " does not have enough answer choices");
                     //return;
 
                 }
@@ -179,7 +179,7 @@ public final class Solution {
                 if (Integer.parseInt(line[two]) > choices.length) {
                     flag = true;
                     throw new Exception(
-        "Error! Correct answer choice number is out of range for "+line[zero]);
+        "Error! Correct answer choice number is out of range for " + line[zero]);
                     //return;
                 }
                 try {
