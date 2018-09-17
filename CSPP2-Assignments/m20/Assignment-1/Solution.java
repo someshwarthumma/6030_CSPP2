@@ -7,7 +7,7 @@ class Quiz {
     /**.
      * This is Question bj
      */
-    private List<Questions>questionsObj;
+    private List<Questions> questionsObj;
     /**.
      * { var_description }.
      */
@@ -65,11 +65,11 @@ public final class Solution {
     /**.
      * This is marklist for list of type integer
      */
-    static List<Integer>marksList = new List<Integer>();
-    /**
+    private static List<Integer> marksList = new List<Integer>();
+    /**.
      * boolean flag for error checking
      */
-    static boolean flag = false;
+    private static boolean flag = false;
     /**.
      * main function to execute test cases.
      *
@@ -100,7 +100,7 @@ public final class Solution {
                 System.out.println("|------------|");
                 System.out.println("| Start Quiz |");
                 System.out.println("|------------|");
-                if (flag == true) {
+                if (flag ) {
                     break;
                 }
                 startQuiz(s, q, Integer.parseInt(tokens[1]));
@@ -109,7 +109,7 @@ public final class Solution {
                 System.out.println("|--------------|");
                 System.out.println("| Score Report |");
                 System.out.println("|--------------|");
-                if (flag == true) {
+                if (flag ) {
                     break;
                 }
                 displayScore(q);
@@ -170,8 +170,8 @@ public final class Solution {
                 //error for one option.
                 if (choices.length < two) {
                     flag = true;
-                    throw new Exception(line[zero] +
-                        " does not have enough answer choices");
+                    throw new Exception(line[zero]
+                        +" does not have enough answer choices");
                     //return;
 
                 }
@@ -199,13 +199,15 @@ public final class Solution {
             System.out.println(e.getMessage());
         }
     }
-
-    static int totalGivenQuestion;
+    /**.
+     * This is static variable for given total questions
+     */
+    private static int totalGivenQuestion;
 
     /**.
      * Starts a quiz.
      *
-     * @param      scan  The scan
+     * @param      s  The scan
      * @param      quiz  The quiz
      * @param      q     The answer count
      */
@@ -247,7 +249,7 @@ public final class Solution {
      */
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report using quiz object.
-        if (flag == false) {
+        if (!flag) {
             int sum = 0;
             for (int i = 0; i < marksList.size(); i++) {
                 System.out.println(quiz.getQuestion(i).getQuestion());
