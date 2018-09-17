@@ -96,12 +96,18 @@ public final class Solution {
                 System.out.println("|------------|");
                 System.out.println("| Start Quiz |");
                 System.out.println("|------------|");
+                if(flag==true){
+                    break;
+                }
                 startQuiz(s, q, Integer.parseInt(tokens[1]));
                 break;
                 case "SCORE_REPORT":
                 System.out.println("|--------------|");
                 System.out.println("| Score Report |");
                 System.out.println("|--------------|");
+                if(flag==true){
+                    break;
+                }
                 displayScore(q);
                 break;
                 default:
@@ -122,6 +128,11 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
+        if(q==0){
+            flag=true;
+            System.out.println("Quiz does not have questions");
+            return;
+        }
         
 
         totalGivenQuestion = q;
