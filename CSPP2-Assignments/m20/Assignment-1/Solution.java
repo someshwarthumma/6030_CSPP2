@@ -162,7 +162,7 @@ public final class Solution {
                 String[] temp =quiz.getQuestion(i).getChoices();
 
                 for(int j=0;j<temp.length-1;j++){
-                    System.out.print(temp[j]+"        ");
+                    System.out.print(temp[j]+"\t");
                 }
                 System.out.println(temp[temp.length-1]);
                 System.out.println();
@@ -196,8 +196,9 @@ public final class Solution {
                     System.out.println(" Wrong Answer! - Penalty: "+marksList.get(i));
                 }
                 sum += marksList.get(i);
-                System.out.println("Total Score: "+sum);
+                
             }
+            System.out.println("Total Score: "+sum);
         }
 
 
