@@ -141,7 +141,7 @@ public final class Solution {
         for(int i =0; i<q;i++){
             String[] line = s.nextLine().split(":");
             //error for abnormal marks.
-            if(line.length!=4+1){
+            if(line.length!=4+1 || line[0].length()==0){
                 flag = true;
                 System.out.println("Error! Malformed question");
                 return;
