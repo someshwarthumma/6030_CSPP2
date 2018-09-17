@@ -139,12 +139,12 @@ public final class Solution {
 
         totalGivenQuestion = q;
         for(int i =0; i<q;i++){
-            if(quiz.getQuestion(i).getQuestion().length()==0){
-                    flag=true;
-                    System.out.println("Error! Malformed question");
-                    return;
-                }
             String[] line = s.nextLine().split(":");
+            if(line.length!=4+1){
+                flag = true;
+                System.out.println("Error! Malformed question");
+                return;
+            }
             String[] choices = line[1].split(",");
             //For finding the malformed question for finding wrong option
             if(Integer.parseInt(line[2])>choices.length){
