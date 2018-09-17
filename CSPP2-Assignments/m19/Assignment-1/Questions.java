@@ -1,4 +1,4 @@
-public class Questions{
+public class Questions {
 	private String question;
 	private String[] choices;
 	private int correct;
@@ -27,7 +27,7 @@ public class Questions{
 	public int getPenalty(){
 		return this.penalty;
 	}
-	public String getCorrectResponse(){
+	public String getCorrectResponse() throws Exception{
 		return choices[correct-1];
 	}
 

@@ -20,28 +20,34 @@ try{
 		String[] d = s.nextLine().split(":");
 		if(d.length!=5){
 			flag = true;
-			System.out.println("Error! Malformed question");
-			return;
+			throw new Exception("Error! Malformed question");
+			//return;
 		}
 		String[] choices = d[1].split(",");
 		if(choices.length<2){
 			flag=  true;
-			System.out.println(questionsObj.get(i).getQueston()+" does not have enough answer choices");
-			return;
+			throw new Exception(questionsObj.get(i).getQueston()+" does not have enough answer choices");
+			//return;
+		}
+		if(Integer.parseInt(d[2])>choices.length){
+			throw new Exception("Error! Correct answer choice number is out of range for question text 1");
+			//return;
 		}
 		questionsObj.add(new Questions(d[0],choices,Integer.parseInt(d[2]),Integer.parseInt(d[3]),Integer.parseInt(d[4])));;
 	}
 	if(no==0){
-		System.out.println("Quiz does not have questions");
-		return;
+		throw new Exception("Quiz does not have questions");
+		//return;
 	}
 	System.out.println(no+" are added to the quiz");
 	} catch ( Exception e){
+		System.out.println(e.getMessage());
 
 	}
 }
 
 public void startQuiz(Scanner s,int num){
+	try{
 	if(num==totalQuestion){
 		for(int i=0;i<num;i++){
 			try{
@@ -69,11 +75,15 @@ public void startQuiz(Scanner s,int num){
 			}
 		}
 	}
+	}catch(Exception e){
+		return;
+	}
 
 }
 
 
 public void displayScore(){
+	try{
 	if(flag==true){
 		return;
 	}
@@ -93,6 +103,9 @@ public void displayScore(){
 	}
 
 	System.out.println("Total Score: "+sum);
+	} catch (Exception e){
+		return;
+	}
 }
 
 }
