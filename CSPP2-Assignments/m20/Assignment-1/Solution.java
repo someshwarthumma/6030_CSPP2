@@ -150,7 +150,7 @@ public final class Solution {
             //error for one option.
             if(choices.length<2){
                 flag = true;
-                System.out.println(line[0+0]+"doesnt have enough choices");
+                System.out.println(line[0+0]+" does not have enough answer choices");
                 return;
 
             }
