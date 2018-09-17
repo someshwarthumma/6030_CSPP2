@@ -133,12 +133,19 @@ public final class Solution {
             System.out.println("Quiz does not have questions");
             return;
         }
+
         
 
         totalGivenQuestion = q;
         for(int i =0; i<q;i++){
             String[] line = s.nextLine().split(":");
             String[] choices = line[1].split(",");
+            //For finding the malformed question for finding wrong option
+            if(Integer.parseInt(line[2])>choices.length){
+                flag = true;
+                System.out.println("Error! Correct answer choice number is out of range for question text 1");
+                return;
+            }
             quiz.addQuestion(new Questions(line[0],choices,
                 Integer.parseInt(line[2]),Integer.parseInt(line[3]),Integer.parseInt(line[4])));
         }
