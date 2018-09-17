@@ -29,7 +29,7 @@ try{
 			System.out.println(questionsObj.get(i).getQueston()+" does not have enough answer choices");
 			return;
 		}
-		questionsObj.add(new Questions(d[0],choices,d[2],Integer.parseInt(d[3]),Integer.parseInt(d[4])));;
+		questionsObj.add(new Questions(d[0],choices,Integer.parseInt(d[2]),Integer.parseInt(d[3]),Integer.parseInt(d[4])));;
 	}
 	if(no==0){
 		System.out.println("Quiz does not have questions");
@@ -62,7 +62,7 @@ public void startQuiz(Scanner s,int num){
 			//System.out.println("Chosen: "+chosenOption);
 			//System.out.println("obj ans: "+"choice "+questionsObj.get(i).getCorrect());
 		
-			if(chosenOption.equals("choice "+questionsObj.get(i).getCorrect())){
+			if(chosenOption.equals(questionsObj.get(i).getCorrectResponse())){
 				marks.add(questionsObj.get(i).getMaxMarks());
 			}else{
 				marks.add(questionsObj.get(i).getPenalty());
