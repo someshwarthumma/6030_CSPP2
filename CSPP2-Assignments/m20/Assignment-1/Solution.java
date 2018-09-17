@@ -7,7 +7,7 @@ class Quiz {
     /**.
      * This is Question bj
      */
-    private List < Questions > questionsObj;
+    private List<Questions>questionsObj;
     /**.
      * { var_description }.
      */
@@ -65,7 +65,7 @@ public final class Solution {
     /**.
      * This is marklist for list of type integer
      */
-    static List < Integer > marksList = new List < Integer > ();
+    static List<Integer>marksList = new List<Integer>();
     /**
      * boolean flag for error checking
      */
@@ -145,45 +145,48 @@ public final class Solution {
                 //error for abnormal marks.
                 final int five = 5;
                 final int zero = 0;
+                final int four = 4;
+                final int three = 3;
+                final int two = 2;
                 if (line.length != five || line[0].length() == zero) {
                     flag = true;
                     throw new Exception("Error! Malformed question");
                     //return;
                 }
 
-                if (Integer.parseInt(line[3]) < zero) {
+                if (Integer.parseInt(line[three]) < zero) {
                     flag = true;
-                    throw new Exception("Invalid max marks for " + line[0]);
+                    throw new Exception("Invalid max marks for " + line[zero]);
                     //return;
                 }
-                if (Integer.parseInt(line[4]) > 0 + 0) {
+                if (Integer.parseInt(line[four]) > 0 + 0) {
                     flag = true;
-                    throw new Exception("Invalid penalty for " + line[0]);
+                    throw new Exception("Invalid penalty for " + line[zero]);
                     //return;
                 }
                 //error if question is not given.
 
                 String[] choices = line[1].split(",");
                 //error for one option.
-                if (choices.length < 2) {
+                if (choices.length < two) {
                     flag = true;
-                    throw new Exception(line[0 + 0] +
+                    throw new Exception(line[zero] +
                         " does not have enough answer choices");
                     //return;
 
                 }
                 //For finding the malformed question for finding wrong option
-                if (Integer.parseInt(line[2]) > choices.length) {
+                if (Integer.parseInt(line[two]) > choices.length) {
                     flag = true;
                     throw new Exception(
-        "Error! Correct answer choice number is out of range for "+line[0]);
+        "Error! Correct answer choice number is out of range for "+line[zero]);
                     //return;
                 }
                 try {
-                    quiz.addQuestion(new Questions(line[0], choices, Integer.
-                        parseInt(line[2]), Integer.
-                        parseInt(line[3]), Integer.
-                        parseInt(line[4])));
+                    quiz.addQuestion(new Questions(line[zero], choices, Integer.
+                        parseInt(line[two]), Integer.
+                        parseInt(line[three]), Integer.
+                        parseInt(line[four])));
                 } catch (Exception e) {
                     flag = true;
                     throw new Exception("Error! Malformed question");
