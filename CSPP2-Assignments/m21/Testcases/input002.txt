@@ -1,0 +1,11 @@
+Food Dosa,2,18/9/2018,8:30
+Water 500,18/9/2018,22:45
+Water 1000,18/9/2018,20:30
+Weight 18/9/2018,6:30,61KG,20%
+Sleep 18/9/2018,10,22
+Foodlog
+Waterlog
+PhysicalActivitylog
+Weightlog
+Sleeplog
+Summary

@@ -1,0 +1,13 @@
+Food Idli,4,17/9/2018,8:30
+Water 1250,17/9/2018,22
+PhysicalActivity walking,brisk,17/9/2018,7,8
+Weight 17/9/2018,6,61KG,21%
+Sleep 17/9/2018,7,10
+
+Food Idli,3,16/9/2018,22
+Water 1250,16/9/2018,6
+PhysicalActivity bicycling,5miles,16/9/2018,19,20
+Weight 16/9/2018,19,62KG,22%
+Sleep 16/9/2018,20,23
+
+Summary 16/9/2018
