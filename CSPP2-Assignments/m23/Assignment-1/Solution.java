@@ -85,7 +85,8 @@ class Solution {
                         // System.out.println(freq2);
 
                     }
-                    System.out.print(plag_percent(freqCount1, freqCount2) + "\t");
+                    System.out.print(plag_percent(
+                        freqCount1, freqCount2) + "\t");
                 } catch (FileNotFoundException e) {
                     System.out.println("File not Found");
 
@@ -98,9 +99,7 @@ class Solution {
 
         }
         System.out.println();
-        // String input1 = "dfghjklkhgvfcghj/fghjklkjh/";
-        //String input2 = "/Users/harinathareddy/Desktop/MSIT COURSES/CSPP2_20186033/cspp2-assignments/m23/input002.txt";
-
+        
     }
     /**
      * plagrism percentage calculation.
