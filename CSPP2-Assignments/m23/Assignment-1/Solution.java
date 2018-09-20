@@ -2,8 +2,8 @@ import java.io.FileReader;
 //import java.lang.*;
 import java.io.File;
 import java.util.Scanner;
-import java.util.regex.Pattern;
-import java.util.regex.Matcher;
+// import java.util.regex.Pattern;
+// import java.util.regex.Matcher;
 import java.util.TreeMap;
 import java.io.BufferedReader;
 /**
@@ -90,7 +90,7 @@ class Solution {
                         // System.out.println(freq2);
 
                     }
-                    System.out.print(plag_percent(
+                    System.out.print(plagPercent(
                         freqCount1, freqCount2) + "\t");
                 } catch (Exception e) {
                     System.out.println("File not Found");
@@ -114,7 +114,7 @@ class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    public static int plag_percent(final TreeMap<String, Integer> freqCount1,
+    public static int plagPercent(final TreeMap<String, Integer> freqCount1,
                                    final TreeMap<String, Integer> freqCount2) {
         int sum1 = 0;
         int sum2 = 0;
