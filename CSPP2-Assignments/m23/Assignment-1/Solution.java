@@ -6,10 +6,16 @@ import java.util.Scanner;
 // import java.util.regex.Matcher;
 import java.util.TreeMap;
 import java.io.BufferedReader;
-/**
+/**.
  * Class for plagrism.
  */
 class Solution {
+    /**.
+     * This is solution
+     */
+    private Solution(){
+        //this is solution
+    }
     /**
      * this is the main function.
      *
@@ -17,7 +23,13 @@ class Solution {
      */
     public static void main(final String[] args) {
         Scanner folder = new Scanner(System.in);
-        File test = new File(folder.nextLine());
+        File test;
+        try{
+        test = new File(folder.nextLine());
+        } catch(Exception e){
+            System.out.println("empty directory");
+            return;
+        }
         File[] files = test.listFiles();
         // System.out.print("\t\t");
         for (File name : files) {
