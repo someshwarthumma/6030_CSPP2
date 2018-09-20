@@ -1,7 +1,11 @@
 import java.io.FileReader;
-import java.lang.*;
-import java.io.*;
-import java.util.*;
+//import java.lang.*;
+import java.io.File;
+import java.util.Scanner;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+import java.util.TreeMap;
+import java.io.BufferedReader;
 /**
  * Class for plagrism.
  */
@@ -88,13 +92,13 @@ class Solution {
                     }
                     System.out.print(plag_percent(
                         freqCount1, freqCount2) + "\t");
-                } catch (FileNotFoundException e) {
+                } catch (Exception e) {
                     System.out.println("File not Found");
 
-                } catch (IOException e) {
+                } /*catch (IOException e) {
                     System.out.println("Invalid Input");
 
-                }
+                }*/
 
             }
 
