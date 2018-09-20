@@ -9,11 +9,11 @@ import java.io.BufferedReader;
 /**.
  * Class for plagrism.
  */
-class Solution {
+final class Solution {
     /**.
      * This is solution
      */
-    private Solution(){
+    private Solution() {
         //this is solution
     }
     /**
@@ -24,9 +24,9 @@ class Solution {
     public static void main(final String[] args) {
         Scanner folder = new Scanner(System.in);
         File test;
-        try{
-        test = new File(folder.nextLine());
-        } catch(Exception e){
+        try {
+            test = new File(folder.nextLine());
+        } catch (Exception e) {
             System.out.println("empty directory");
             return;
         }
@@ -57,8 +57,8 @@ class Solution {
                     String lines;
                     while ((lines = reader1.readLine()) != null) {
                         String[] line = lines.
-                        replaceAll("[^a-zA-Z0-9_ ]", "").
-                        toLowerCase().split(" ");
+                                        replaceAll("[^a-zA-Z0-9_ ]", "").
+                                        toLowerCase().split(" ");
                         // String[] line = lines.toLowerCase().split(" ");
                         for (String element : line) {
                             if (freqCount1.containsKey(element)) {
@@ -80,15 +80,15 @@ class Solution {
 
                     while ((lines = reader2.readLine()) != null) {
                         String[] line = lines.
-                        replaceAll("[^a-zA-Z_ ]", "").
-                        toLowerCase().split(" ");
+                                        replaceAll("[^a-zA-Z_ ]", "").
+                                        toLowerCase().split(" ");
 
 
                         // String [] line = lines.toLowerCase().split(" ");
 
                         for (String element : line) {
-                    if (freqCount2.containsKey(element)) {
-                    freqCount2.put(element, freqCount2.get(element) + 1);
+                            if (freqCount2.containsKey(element)) {
+                                freqCount2.put(element, freqCount2.get(element) + 1);
 
                             } else {
                                 freqCount2.put(element, 1);
@@ -103,7 +103,7 @@ class Solution {
 
                     }
                     System.out.print(plagPercent(
-                        freqCount1, freqCount2) + "\t");
+                                         freqCount1, freqCount2) + "\t");
                 } catch (Exception e) {
                     System.out.println("File not Found");
 
@@ -127,7 +127,7 @@ class Solution {
      * @return     { description_of_the_return_value }
      */
     public static int plagPercent(final TreeMap<String, Integer> freqCount1,
-                                   final TreeMap<String, Integer> freqCount2) {
+                                  final TreeMap<String, Integer> freqCount2) {
         int sum1 = 0;
         int sum2 = 0;
         int dot = 0;
