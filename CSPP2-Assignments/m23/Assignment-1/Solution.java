@@ -39,14 +39,15 @@ class Solution {
                     TreeMap<String, Integer> freqCount2 = new TreeMap<>();
 
                     String lines;
-                    while ((lines = reader1.readLine()) != null ) {
-                        String [] line = lines.
+                    while ((lines = reader1.readLine()) != null) {
+                        String[] line = lines.
                         replaceAll("[^a-zA-Z0-9_ ]", "").
                         toLowerCase().split(" ");
                         // String[] line = lines.toLowerCase().split(" ");
                         for (String element : line) {
                             if (freqCount1.containsKey(element)) {
-                                freqCount1.put(element, freqCount1.get(element) + 1);
+                                freqCount1.
+                                put(element, freqCount1.get(element) + 1);
 
                             } else {
                                 freqCount1.put(element, 1);
@@ -61,8 +62,8 @@ class Solution {
 
                     }
 
-                    while ((lines = reader2.readLine()) != null ) {
-                        String [] line = lines.
+                    while ((lines = reader2.readLine()) != null) {
+                        String[] line = lines.
                         replaceAll("[^a-zA-Z_ ]", "").
                         toLowerCase().split(" ");
 
@@ -99,7 +100,7 @@ class Solution {
 
         }
         System.out.println();
-        
+
     }
     /**
      * plagrism percentage calculation.
@@ -111,7 +112,7 @@ class Solution {
      */
     public static int plag_percent(final TreeMap<String, Integer> freqCount1,
                                    final TreeMap<String, Integer> freqCount2) {
-        int sum1 = 0 ;
+        int sum1 = 0;
         int sum2 = 0;
         int dot = 0;
         // System.out.println(freq + "    " + freq2);
@@ -126,7 +127,7 @@ class Solution {
         }
         // System.out.println("dat "+dot+" s1"+sum1+"s2"+sum2);
         final int hun = 100;
-        return ((int)((dot / (Math.sqrt(sum1) * Math.sqrt(sum2))) * hun));
+        return ((int) ((dot / (Math.sqrt(sum1) * Math.sqrt(sum2))) * hun));
     }
 
 }
