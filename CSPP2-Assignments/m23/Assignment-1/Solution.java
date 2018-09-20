@@ -11,13 +11,13 @@ class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner folder = new Scanner(System.in);
         File test = new File(folder.nextLine());
         File[] files = test.listFiles();
         // System.out.print("\t\t");
         for (File name : files) {
-        System.out.print("\t" + name.toString().split("\\\\")[1]);
+            System.out.print("\t" + name.toString().split("\\\\")[1]);
 
         }
         for (File each : files) {
@@ -40,7 +40,9 @@ class Solution {
 
                     String lines;
                     while ((lines = reader1.readLine()) != null ) {
-                        String [] line = lines.replaceAll("[^a-zA-Z0-9_ ]", "").toLowerCase().split(" ");
+                        String [] line = lines.
+                        replaceAll("[^a-zA-Z0-9_ ]", "").
+                        toLowerCase().split(" ");
                         // String[] line = lines.toLowerCase().split(" ");
                         for (String element : line) {
                             if (freqCount1.containsKey(element)) {
@@ -60,14 +62,16 @@ class Solution {
                     }
 
                     while ((lines = reader2.readLine()) != null ) {
-                        String [] line = lines.replaceAll("[^a-zA-Z_ ]", "").toLowerCase().split(" ");
+                        String [] line = lines.
+                        replaceAll("[^a-zA-Z_ ]", "").
+                        toLowerCase().split(" ");
 
 
                         // String [] line = lines.toLowerCase().split(" ");
 
                         for (String element : line) {
-                            if (freqCount2.containsKey(element)) {
-                                freqCount2.put(element, freqCount2.get(element) + 1);
+                    if (freqCount2.containsKey(element)) {
+                    freqCount2.put(element, freqCount2.get(element) + 1);
 
                             } else {
                                 freqCount2.put(element, 1);
@@ -106,8 +110,8 @@ class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    public static int plag_percent(TreeMap<String, Integer> freqCount1,
-                                   TreeMap<String, Integer> freqCount2) {
+    public static int plag_percent(final TreeMap<String, Integer> freqCount1,
+                                   final TreeMap<String, Integer> freqCount2) {
         int sum1 = 0 ;
         int sum2 = 0;
         int dot = 0;
@@ -122,7 +126,8 @@ class Solution {
 
         }
         // System.out.println("dat "+dot+" s1"+sum1+"s2"+sum2);
-        return ((int)((dot / (Math.sqrt(sum1) * Math.sqrt(sum2))) * 100));
+        final int hun = 100;
+        return ((int)((dot / (Math.sqrt(sum1) * Math.sqrt(sum2))) * hun));
     }
 
 }
