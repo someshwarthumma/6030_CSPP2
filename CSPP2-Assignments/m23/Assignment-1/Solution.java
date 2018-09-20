@@ -88,7 +88,8 @@ final class Solution {
 
                         for (String element : line) {
                             if (freqCount2.containsKey(element)) {
-                                freqCount2.put(element, freqCount2.get(element) + 1);
+                                freqCount2.put(element, freqCount2.
+                                    get(element) + 1);
 
                             } else {
                                 freqCount2.put(element, 1);
