@@ -4,7 +4,6 @@
 public class Todoist{
 	static List<Task>taskList = new List<Task>();
 	Todoist(){
-
 	}
 	/**.
 	 *
@@ -21,8 +20,6 @@ public class Todoist{
 			System.out.println(taskList.get(i).getPrint()); 
 		}
 	}
-
-
 	/**.
 	 * This is getNextTask.
 	 *
@@ -33,7 +30,10 @@ public class Todoist{
 	public String getNextTask(String name){
 		for(int i =0;i<taskList.size();i++){
 			if(name.equals(taskList.get(i).getName())){
-				if(taskList.get(i).getImportant()==true && taskList.get(i).getUrgent()==false && taskList.get(i).getStatus().equals("todo")){
+				if(taskList.get(i).
+					getImportant()==true && taskList.get(i).
+					getUrgent()==false && taskList.get(i).
+					getStatus().equals("todo")){
 					return taskList.get(i).getPrint();
 				}
 			}
@@ -70,7 +70,10 @@ public class Todoist{
 		int j = 0;
 		for(int i =0;i<taskList.size();i++){
 			if(name.equals(taskList.get(i).getName())){
-				if(taskList.get(i).getImportant()==true && taskList.get(i).getUrgent()==false && taskList.get(i).getStatus().equals("todo")){
+				if(taskList.get(i).
+					getImportant()==true && taskList.get(i).
+					getUrgent()==false && taskList.get(i).
+					getStatus().equals("todo")){
 					arr[j] = taskList.get(i).getPrint();
 					j++;
 					//return taskList.get(i).getPrint();
