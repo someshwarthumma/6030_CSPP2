@@ -50,7 +50,7 @@ public class Task{
 		//return title+", "+assignedTo+", "+timeToComplete+", "+importantflag+", "+urgentflag+", "+status;
 	}
 
-	public void getPrint(){
+	public String getPrint(){
 		String urgentflag;
 		String importantflag;
 		
@@ -65,7 +65,7 @@ public class Task{
 			importantflag = "Not Important";
 		}
 
-		 System.out.println(title+", "+assignedTo+", "+timeToComplete+", "+importantflag+", "+urgentflag+", "+status);
-		//return title+", "+assignedTo+", "+timeToComplete+", "+importantflag+", "+urgentflag+", "+status;
+		//System.out.println(title+", "+assignedTo+", "+timeToComplete+", "+importantflag+", "+urgentflag+", "+status);
+		return title+", "+assignedTo+", "+timeToComplete+", "+importantflag+", "+urgentflag+", "+status;
 	}
 }
