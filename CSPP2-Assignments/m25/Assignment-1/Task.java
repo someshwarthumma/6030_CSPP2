@@ -38,6 +38,9 @@ public class Task{
 	public String getStatus(){
 		return this.status;
 	}
+	public int getTime(){
+		return this.timeToComplete;
+	}
 
 	public void tostring(){
 		String urgentflag;

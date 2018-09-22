@@ -29,5 +29,15 @@ public class Todoist{
 		return "null";
 	}
 
+	public int totalTime4Completion(){
+		int sum =0;
+		for(int i =0 ;i<taskList.size();i++){
+			if(taskList.get(i).getStatus().equals("todo")){
+				sum += taskList.get(i).getTime();
+			}
+		}
+		return sum;
+	}
+
 
 }

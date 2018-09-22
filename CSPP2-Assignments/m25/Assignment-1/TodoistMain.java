@@ -38,7 +38,7 @@ public class TodoistMain {
                     System.out.println(Arrays.deepToString(tasks));*/
                 break;
                 case "total-time":
-                    //System.out.println(todo.totalTime4Completion());
+                    System.out.println(todo.totalTime4Completion());
                 break;
                 default:
                 break;
