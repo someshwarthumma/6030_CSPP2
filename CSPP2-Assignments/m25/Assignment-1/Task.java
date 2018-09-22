@@ -23,7 +23,7 @@ public class Task{
 		if(statu.equals("todo") || statu.equals("done")){
 			this.status = statu;
 		} else{
-			throw new Exception("Invalid status "+this.status);
+			throw new Exception("Invalid status "+statu);
 		}
 	}
 
