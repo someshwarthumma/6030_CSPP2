@@ -39,5 +39,25 @@ public class Todoist{
 		return sum;
 	}
 
+	public String[] getNextTask(String name, int count){
+		String[] arr = new String[count];
+		int j = 0;
+		for(int i =0;i<taskList.size();i++){
+			if(name.equals(taskList.get(i).getName())){
+				if(taskList.get(i).getImportant()==true && taskList.get(i).getUrgent()==false && taskList.get(i).getStatus().equals("todo")){
+					arr[j] = taskList.get(i).getPrint();
+					j++;
+					//return taskList.get(i).getPrint();
+				}
+				if (j == count-1){
+					return arr;
+				}
+			}
+	
+			
+		}
+		return null;
+	}
+
 
 }
