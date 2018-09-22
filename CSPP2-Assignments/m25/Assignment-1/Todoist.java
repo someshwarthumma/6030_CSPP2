@@ -49,7 +49,7 @@ public class Todoist{
 					j++;
 					//return taskList.get(i).getPrint();
 				}
-				if (j == count-1){
+				if (j == count){
 					return arr;
 				}
 			}
