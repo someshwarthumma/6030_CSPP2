@@ -35,8 +35,8 @@ public class List<E> {
     public void add(E item) {
         //Inserts the specified element at the end of the list.
         //You can modify the code in this method.
-        /*if(size == list.length){
-            resize();*/
+        if(size == list.length){
+            resize();
         list[size++] = item;
     }
     /*Inserts all the elements of specified int
