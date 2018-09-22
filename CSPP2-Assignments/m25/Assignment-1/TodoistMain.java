@@ -11,7 +11,7 @@ final public class TodoistMain {
 	/**.
 	 * Constructs the object.
 	 */
-	private TodoistMain(){
+	private TodoistMain() {
 		//this is constructor
 	}
     /**.
@@ -89,12 +89,18 @@ final public class TodoistMain {
      * @throws     Exception  if task inputs are invalid
      */
     public static Task createTask(final String[] tokens) throws Exception {
-        String title = tokens[1];
-        String assignedTo = tokens[2];
-        int timeToComplete = Integer.parseInt(tokens[3]);
-        boolean important = tokens[4].equals("y");
-        boolean urgent = tokens[5].equals("y");
-        String status = tokens[6];
+    	final int one =1;
+    	final  int two =2;
+    	final int three =3;
+    	final int four =4;
+    	final int five =5;
+    	final int six = 6;
+        String title = tokens[one];
+        String assignedTo = tokens[two];
+        int timeToComplete = Integer.parseInt(tokens[three]);
+        boolean important = tokens[four].equals("y");
+        boolean urgent = tokens[five].equals("y");
+        String status = tokens[six];
         return new Task(
             title, assignedTo, timeToComplete, important, urgent, status);
     }
