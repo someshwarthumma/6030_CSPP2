@@ -1,16 +1,20 @@
 import java.util.Scanner;
-import java.util.Arrays;
 
-/**
+/**.
   * write your code below this comment
   */
 
-/**
+/**.
  * Class for todoist main.
  */
 public class TodoistMain {
-
-    /**
+	/**.
+	 * Constructs the object.
+	 */
+	private TodoistMain(){
+		//this is constructor
+	}
+    /**.
      * Starts a test.
      */
     public static void startTest() {
@@ -46,7 +50,7 @@ public class TodoistMain {
         }
     }
 
-    /**
+    /**.
      * method to test add task.
      *
      * @param      todo    The todo
@@ -60,7 +64,7 @@ public class TodoistMain {
         }
     }
 
-    /**
+    /**.
      * method to test the creation of task object.
      *
      * @param      tokens  The tokens
@@ -75,7 +79,7 @@ public class TodoistMain {
         }
     }
 
-    /**
+    /**.
      * Creates a task object.
      *
      * @param      tokens     The tokens
@@ -95,7 +99,7 @@ public class TodoistMain {
             title, assignedTo, timeToComplete, important, urgent, status);
     }
 
-    /**
+    /**.
      * main method.
      *
      * @param      args  The command line arguments
