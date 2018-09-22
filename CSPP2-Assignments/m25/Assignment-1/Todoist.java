@@ -85,7 +85,10 @@ public class Todoist{
 	
 			
 		}
-		arr[count-1] = "null";
+		for(int k =j+1;j<count;j++){
+			arr[k] = "null";
+		}
+		
 		return arr;
 	}
 
