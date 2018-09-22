@@ -30,7 +30,7 @@ public class TodoistMain {
                 	todo.tostring();
                 break;
                 case "get-next":
-                    //System.out.println(todo.getNextTask(tokens[1]));
+                    System.out.println(todo.getNextTask(tokens[1]));
                 break;
                 case "get-next-n":
                     /*int n = Integer.parseInt(tokens[2]);
