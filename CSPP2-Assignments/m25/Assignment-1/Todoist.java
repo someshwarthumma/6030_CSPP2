@@ -57,8 +57,8 @@ public class Todoist{
 	
 			
 		}
-		System.out.println("This is end: ");
-		return null;
+		arr[count-1] = "null";
+		return arr;
 	}
 
 
