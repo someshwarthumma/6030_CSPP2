@@ -35,6 +35,9 @@ public class Task{
 	public boolean getUrgent(){
 		return this.urgent;
 	}
+	public String getStatus(){
+		return this.status;
+	}
 
 	public void tostring(){
 		String urgentflag;

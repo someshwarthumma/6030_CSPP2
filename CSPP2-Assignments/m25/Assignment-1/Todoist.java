@@ -19,7 +19,7 @@ public class Todoist{
 	public String getNextTask(String name){
 		for(int i =0;i<taskList.size();i++){
 			if(name.equals(taskList.get(i).getName())){
-				if(taskList.get(i).getImportant()==true && taskList.get(i).getUrgent()==false){
+				if(taskList.get(i).getImportant()==true && taskList.get(i).getUrgent()==false && taskList.get(i).getStatus().equals("todo")){
 					return taskList.get(i).getPrint();
 				}
 			}
