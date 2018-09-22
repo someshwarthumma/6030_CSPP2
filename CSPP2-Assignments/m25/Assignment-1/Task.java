@@ -17,7 +17,6 @@ public class Task{
 		} else {
 			throw new Exception("Invalid timeToComplete "+time);
 		}
-		
 		this.important = imp;
 		this.urgent = urg;
 		if(statu.equals("todo") || statu.equals("done")){
@@ -29,6 +28,12 @@ public class Task{
 
 	public String getName(){
 		return this.assignedTo;
+	}
+	public boolean getImportant(){
+		return this.important;
+	}
+	public boolean getUrgent(){
+		return this.urgent;
 	}
 
 	public void tostring(){
