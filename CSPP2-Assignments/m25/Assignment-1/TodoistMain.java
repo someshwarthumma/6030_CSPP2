@@ -8,12 +8,12 @@ import java.util.Arrays;
  * Class for todoist main.
  */
 final public class TodoistMain {
-	/**.
-	 * Constructs the object.
-	 */
-	private TodoistMain() {
-		//this is constructor
-	}
+    /**.
+     * Constructs the object.
+     */
+    private TodoistMain() {
+        //this is constructor
+    }
     /**.
      * Starts a test.
      */
@@ -31,7 +31,7 @@ final public class TodoistMain {
                 break;
                 case "print-todoist":
                     //System.out.println(todo);
-                	todo.tostring();
+                    todo.tostring();
                 break;
                 case "get-next":
                     System.out.println(todo.getNextTask(tokens[1]));
@@ -39,7 +39,8 @@ final public class TodoistMain {
                 case "get-next-n":
                     int n = Integer.parseInt(tokens[2]);
                     //Task[] tasks = todo.getNextTask(tokens[1], n);
-                    System.out.println(Arrays.deepToString(todo.getNextTask(tokens[1], n)));
+                    System.out.println(
+                        Arrays.deepToString(todo.getNextTask(tokens[1], n)));
                 break;
                 case "total-time":
                     System.out.println(todo.totalTime4Completion());
@@ -71,8 +72,8 @@ final public class TodoistMain {
      */
     public static void testTask(final String[] tokens) {
         try {
-        	Task t = createTask(tokens);
-        	t.tostring();
+            Task t = createTask(tokens);
+            t.tostring();
             //System.out.println(createTask(tokens));
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -89,12 +90,12 @@ final public class TodoistMain {
      * @throws     Exception  if task inputs are invalid
      */
     public static Task createTask(final String[] tokens) throws Exception {
-    	final int one =1;
-    	final  int two =2;
-    	final int three =3;
-    	final int four =4;
-    	final int five =5;
-    	final int six = 6;
+        final int one = 1;
+        final  int two = 2;
+        final int three = 3;
+        final int four = 4;
+        final int five = 5;
+        final int six = 6;
         String title = tokens[one];
         String assignedTo = tokens[two];
         int timeToComplete = Integer.parseInt(tokens[three]);
