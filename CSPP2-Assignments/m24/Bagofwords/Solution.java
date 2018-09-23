@@ -104,7 +104,7 @@ final class Solution {
 
                     }
                     System.out.print(plagPercent(
-                                         freqCount1, freqCount2) + "\t");
+                                         freqCount1, freqCount2) + "\t\t");
                 } catch (Exception e) {
                     System.out.println("File not Found");
 
