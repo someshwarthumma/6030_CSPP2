@@ -7,7 +7,7 @@ import java.util.Scanner;
 import java.util.TreeMap;
 import java.io.BufferedReader;
 /**.
- * Class for plagrism. 
+ * Class for plagrism.
  */
 final class Solution {
     /**.
