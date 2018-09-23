@@ -2,21 +2,21 @@ import java.util.Scanner;
 import java.io.FileReader;
 import java.io.File;
 
-/**
+/**.
  * { item_description }
  */
 final class Solution {
-    /**
+    /**.
      * { var_description }
      */
     private static final double HUN = 100.0;
-    /**
+    /**.
      * Constructs the object.
      */
     private Solution() {
 
     }
-    /**
+    /**.
      * { function_description }
      *
      * @param      args  The arguments
@@ -67,7 +67,7 @@ final class Solution {
             System.out.println("Empty Directory");
         }
     }
-    /**
+    /**.
      * { function_description }
      *
      * @param      file  The file
@@ -91,34 +91,34 @@ final class Solution {
         return str;
     }
 }
-/**
+/**.
  * Class for lcs.
  */
 class Lcs {
-    /**
+    /**.
      * { var_description }
      */
     private static final int TWENTY = 20;
-    /**
+    /**.
      * { var_description }
      */
     private static final double HUN = 100.0;
-    /**
+    /**.
      * { var_description }
      */
     private Words[] words;
-    /**
+    /**.
      * { var_description }
      */
     private int a;
-    /**
+    /**.
      * Constructs the object.
      */
     Lcs() {
         words = new Words[TWENTY];
         a = 0;
     }
-    /**
+    /**.
      * Adds words.
      *
      * @param      token  The token
@@ -126,7 +126,7 @@ class Lcs {
     public void addWords(final Words token) {
         words[a++] = token;
     }
-    /**
+    /**.
      * { function_description }
      *
      * @param      on    { parameter_description }
@@ -178,30 +178,30 @@ class Lcs {
         return (lcspercentage * HUN);
     }
 }
-/**
+/**.
  * Class for words.
  */
-class Words {
-    /**
+class Word {
+    /**.
      * { var_description }
      */
     private String words;
-    /**
+    /**.
      * { var_description }
      */
     private int length;
 
-    /**
+    /**.
      * Constructs the object.
      *
      * @param      tokens  The tokens
      * @param      le      { parameter_description }
      */
-    Words(final String tokens, final int le) {
+    Word(final String tokens, final int le) {
         this.words = tokens;
         this.length = le;
     }
-    /**
+    /**.
      * Gets the words.
      *
      * @return     The words.
@@ -209,7 +209,7 @@ class Words {
     public String getWords() {
         return this.words;
     }
-    /**
+    /**.
      * Gets the length.
      *
      * @return     The length.
